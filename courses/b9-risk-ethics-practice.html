@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 9 · Risk &amp; ethics in practice - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 9 of 10</div>
+    <h1>Risk &amp; ethics in practice: <span class="accent">you are the last line of defense</span></h1>
+    <p class="sub">When AI touches a decision about one of your people, you are the last line of defense - for their data, and for whether the call is fair. This session is not theory. You will learn the manager's risk map, the hard lines in daily work, and how to catch bias before it ships, then walk out with a people-data and bias checklist your whole team can use. The two rails run loud through all of it: AI advises, you decide and own it, and you protect your people.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Why this matters</span>
+      <span class="a2" style="flex:4">3-24 · The risk map, the lines, bias</span>
+      <span class="a3" style="flex:5">24-42 · Build-along: audit + your checklist</span>
+      <span class="a4" style="flex:1">42-45 · Quiz</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The hard frame</h2>
+    </div>
+    <p class="lede">Here is the uncomfortable truth of this session. Your people cannot see what you paste into a chatbot, and they cannot see the bias in a recommendation that sounds confident and reasonable. That makes you - not the tool, not IT, not HR - the last line of defense for your team's data and for fairness in the decisions that shape their careers. AI will hand you a fluent, self-assured answer about a person; whether it is private and fair is on you. This session turns that responsibility into a checklist you can actually run.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A people-data and bias checklist for your team - a plain "green light / red line / always" card you can hand to every person who manages people, so nobody has to guess where the line is when AI touches an employee's data or an employee's future.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE RISK MAP ============ -->
+  <section class="section" id="risk-map">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the people-data + responsible-AI canon</span>
+      <h2>The manager's risk map <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Four risks sit on a manager's desk, and they are different from the ones the whole company worries about, because yours are about the people you lead. Know all four by name, because you cannot defend against a risk you cannot see.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A gated flow: AI assists by drafting a people recommendation, then it must pass a privacy check and a bias check before the manager decides and owns it">
+        <defs>
+          <marker id="b9xAh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#C3D2CB"/>
+          </marker>
+        </defs>
+        <style>
+          .b9xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b9xTi { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b9xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b9xXi { font: 400 12.5px Inter, sans-serif; fill: #12211C; }
+          .b9xN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <line x1="200" y1="110" x2="234" y2="110" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b9xAh)"/>
+        <line x1="416" y1="110" x2="450" y2="110" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b9xAh)"/>
+        <line x1="632" y1="110" x2="666" y2="110" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b9xAh)"/>
+        <rect x="20" y="60" width="180" height="100" rx="12" fill="#1B5E4B"/>
+        <text class="b9xT" x="110" y="104" text-anchor="middle">AI assists</text>
+        <text class="b9xX" x="110" y="126" text-anchor="middle">drafts a people rec</text>
+        <rect x="236" y="60" width="180" height="100" rx="12" fill="#3E8E72"/>
+        <text class="b9xT" x="326" y="104" text-anchor="middle">Privacy check</text>
+        <text class="b9xX" x="326" y="126" text-anchor="middle">no PII in the tool</text>
+        <rect x="452" y="60" width="180" height="100" rx="12" fill="#A7D4C4"/>
+        <text class="b9xTi" x="542" y="104" text-anchor="middle">Bias check</text>
+        <text class="b9xXi" x="542" y="126" text-anchor="middle">fair if name changed?</text>
+        <rect x="668" y="60" width="180" height="100" rx="12" fill="#14332B"/>
+        <text class="b9xT" x="758" y="104" text-anchor="middle">You decide</text>
+        <text class="b9xX" x="758" y="126" text-anchor="middle">and own the call</text>
+        <rect x="20" y="250" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b9xN" x="44" y="262">AI never reaches a person unchecked - it clears privacy and bias, then a human owns it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI assists, but privacy and bias gate every decision before it reaches a person</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four risks on your desk<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each risk is quiet until it is not. Learn to name them so you catch them in the moment, not in the incident review.</p>
+        <ul>
+          <li><strong>People-data privacy.</strong> Employee PII, performance notes, and HR records are protected data - GDPR, PDPA, and employment law apply to your team exactly as they do to customers. A name plus a performance note in a consumer tool is a leak.</li>
+          <li><strong>Bias in people decisions.</strong> Hiring, promotion, performance - AI can take a biased pattern and hand it back as a confident, well-worded recommendation. It launders the bias into something that looks objective.</li>
+          <li><strong>Disclosure.</strong> When AI materially affects a person - a screening step, a ranking - they generally deserve to know. Silence erodes trust fast when it comes out later.</li>
+          <li><strong>Shadow-AI.</strong> Unapproved tools your team quietly adopts. Convenient, invisible, and outside every guardrail - which is exactly what makes it dangerous.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Rail two, said plainly</strong>
+          If a real person's name or record is in what you are about to paste, and they would not be fine seeing where it went, stop. Anonymize, or use only an approved tool. You are the check that stands between your people's data and a tool that never forgets.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the manager is the last line<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Policy, legal, and IT set the fences. But in the moment a manager is drafting a review, comparing two candidates, or talking through a struggling report, no one else is in the room. The paste happens on your keyboard; the recommendation lands in your judgment. That is why the defense has to live in your habits, not just in a policy document nobody reads mid-task.</p>
+        <ul>
+          <li><strong>You are closest to the data.</strong> The employee's real details pass through your hands first.</li>
+          <li><strong>You are closest to the call.</strong> Fairness is decided where the decision is made - your desk.</li>
+          <li><strong>You set the norm.</strong> Your team copies what you do with AI, not what the handbook says.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE LINES ============ -->
+  <section class="section" id="the-lines">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the people-data rail in daily work</span>
+      <h2>The lines in daily work <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Rules only help if they survive contact with a busy Tuesday. So here are the three hard lines a manager must never cross - and, next to each, the safe move that gets you the same help without the risk. Read the right column as loudly as the left.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Never do this - do this instead<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Risky move</th><th>The line</th><th>The safe move</th></tr></thead>
+          <tbody>
+            <tr><td>Paste an employee's name and record into a consumer tool</td><td>No real people-data in unapproved tools</td><td>Strip names and details, or use an HR-approved tool for anything identifiable</td></tr>
+            <tr><td>Let AI decide a rating, a promotion, or a PIP</td><td>No decision about a person is the AI's to make</td><td>Use AI to structure your thinking; you make and own the call</td></tr>
+            <tr><td>Ship a people recommendation without a bias check</td><td>Never skip the fairness check on a people decision</td><td>Run the "would it hold if the name changed" test before you act</td></tr>
+            <tr><td>Screen or rank people with AI and say nothing</td><td>Don't hide that AI materially affects a person</td><td>Disclose where AI is in the loop; keep a human review on the outcome</td></tr>
+            <tr><td>Adopt a handy new AI tool quietly</td><td>No shadow-AI on people-work</td><td>Get it approved first; if unsure, ask before you paste</td></tr>
+          </tbody>
+        </table>
+        <p>Notice every safe move keeps the help and removes the harm. You almost never have to choose between "use AI" and "protect my people" - you just have to take the anonymized, human-owned path.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The one-question test before you paste<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need to memorize the table. You need one reflex, run every single time before you hit paste on anything about a person:</p>
+        <div class="callout tip">
+          <strong>Before you paste, ask</strong>
+          "Is there a real person's data in here, and am I letting AI decide instead of advise?" If either answer is yes, stop - anonymize the data, and take back the decision. That reflex is rails one and two in a single breath.
+        </div>
+        <p>Run it enough times and it stops being a rule and becomes instinct. That instinct is the whole point of this session.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: BIAS ============ -->
+  <section class="section" id="bias">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers bias in people decisions</span>
+      <h2>Bias, concretely <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">"Watch for bias" is useless as advice unless you know what it looks like and how to test for it. Here is bias in people decisions made concrete - how it shows up, how you check, and when you stop and escalate.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>How bias shows up, and the check<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI does not invent fairness; it reflects patterns in its inputs and hands them back with confidence. In people-work that shows up in specific, catchable ways.</p>
+        <ul>
+          <li><strong>Confident laundering.</strong> A biased leaning arrives as a crisp, reasonable-sounding recommendation. The polish is what makes it dangerous.</li>
+          <li><strong>Uneven language.</strong> Warm words for some team members, clinical or harsh words for others doing similar work - watch the adjectives.</li>
+          <li><strong>Proxy signals.</strong> Tenure, school, a name, a gap in dates standing in for a protected trait or an irrelevant one.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The two checks that catch most of it</strong>
+          Consistency: would this recommendation hold for everyone on the team doing comparable work? Swap test: would it read the same if the name, gender, or background were different? If either wobbles, the bias is in the output - not in the person.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When to escalate to HR or legal<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You are the last line of defense, not the whole legal system. Part of doing this well is knowing when the call is bigger than you - and raising it early, not after the decision is made.</p>
+        <ul>
+          <li><strong>Escalate when</strong> a people decision could have legal or fairness consequences and you are not sure it is clean - hiring, firing, promotion, pay, a PIP, an accommodation.</li>
+          <li><strong>Escalate when</strong> the swap test wobbles and you cannot explain the difference on the merits.</li>
+          <li><strong>Escalate when</strong> a tool captured or moved employee data it should not have, even by accident.</li>
+        </ul>
+        <div class="callout win">
+          <strong>Escalating is strength, not weakness</strong>
+          Raising a fairness concern early protects your person, your team, and you. The manager who asks "is this clean?" looks far better in six months than the one who shipped a confident, biased call.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Audit a manager's AI use for risk <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The best way to sharpen your eye is to catch someone else's near-miss. Here is an anonymized scenario of a manager using AI on people-work. Your job: flag every privacy and bias risk, then fix it. This is exactly the review you will run on your own habits after class.</p>
+
+    <div class="callout example">
+      <span class="ex-pill">The scenario</span>
+      <p><strong>Anonymized - all names and details are invented.</strong> A team lead is deciding who to put forward for one promotion slot. They open a free consumer chatbot, paste in two reports' full names, last three performance ratings, salary, and a line about one being "on maternity leave earlier this year", and ask: "Who is more promotable? Just tell me who to pick." The AI names one, calling them "more consistent and committed". The lead copies that line into the promotion note. No approval, no disclosure, no second look.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p>Read the scenario and list every risk you can find. Do not fix yet - just flag. Aim for at least five.</p></div>
+      <div class="step"><p><strong>Privacy flags:</strong> real names, ratings, salary, and a maternity reference - all people-data - in an unapproved consumer tool. That is rail two broken outright.</p></div>
+      <div class="step"><p><strong>Bias flags:</strong> the "committed" verdict leans on a protected circumstance (maternity leave); "just tell me who to pick" hands the decision to the AI - rail one broken.</p></div>
+      <div class="step"><p><strong>Process flags:</strong> no bias check, no disclosure, and the AI's wording copied straight into an official note as if it were the manager's own judgment.</p></div>
+      <div class="step"><p>Now fix it. Use the prompt below to rebuild the same task the safe way - anonymized inputs, a structured comparison, an explicit bias check, and the decision left to the human.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">What the manager did - do not copy this</span>Here are two people up for promotion: [real name], ratings [x], salary [x], on maternity leave earlier this year; and [real name], ratings [x]. Who is more promotable? Just tell me who to pick.</div>
+
+    <div class="prompt-box good"><span class="label">★ The safe rebuild - anonymized, structured, human-owned</span>I am comparing two team members for one promotion slot. I have removed all names and
+anything personal. Person A: [neutral, job-relevant evidence only]. Person B: [same].
+Do NOT tell me who to pick.
+Instead: (1) lay out a fair comparison against the promotion criteria only;
+(2) flag anything in my evidence that could be bias or an irrelevant proxy;
+(3) tell me what job-relevant information is missing. I will make and own the decision.</div>
+
+    <div class="callout tip">
+      <strong>The audit habit</strong>
+      "Flag, then fix" is the move. Once a week, look back at how you used AI on people-work and run this same two-pass review on yourself. You will catch your own near-misses before they become incidents.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your team's people-data + bias checklist <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">The artifact you take away: a one-page checklist any manager on your team can run in ten seconds. Three columns - green light, red line, always. You draft it with AI, then edit it hard, which is rail one in miniature.</p>
+
+    <div class="steps">
+      <div class="step"><p>Give the AI your context: what people-data you handle, which tools are approved (or "none yet"), and the two rails.</p></div>
+      <div class="step"><p>Ask for three short lists - <em>Green light</em> (safe: anonymized thinking, structured comparisons, drafting with your judgment), <em>Red line</em> (never: real people-data in consumer tools, letting AI decide a rating or promotion, skipping the bias check), and <em>Always</em> (anonymize, run the swap test, human owns the call, escalate when unsure).</p></div>
+      <div class="step"><p>Edit it hard. Add your real approved tools, your org's escalation path to HR and legal, and the specific people-decisions your team makes. The draft is 70%; your judgment is the 30% that matters.</p></div>
+      <div class="step"><p>Share it with every manager on your team. You will fold it into the team operating model in the finale, b10.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The checklist prompt</span>Draft a one-page "people-data + bias checklist" for the managers on my team.
+Context: we handle team performance and some HR data; approved tools are [list, or "none yet"];
+escalation goes to [HR / legal contact].
+
+Build it around two rails:
+1) AI advises, the manager decides and owns it - never let AI decide a rating, promotion, or PIP.
+2) Protect people-data - no employee names, performance, or HR data in consumer tools; anonymize
+   to think; run a bias check (consistency + would it hold if the name changed) on every people decision.
+
+Format: three short lists - Green light, Red line, Always. Plain language, one page, so any manager can run it in ten seconds.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The checklist that stopped the quiet leak.</strong> One team's managers were each guessing where the line was - some pasting review notes into free tools, some too scared to use AI at all. A one-page green/red/always card, agreed in an afternoon, gave everyone the same reflex before touching people-work. Managers got faster on the thinking, and not one employee record left an approved tool again.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish both demos if you did not complete them live - especially the audit. Catching the invented manager's near-misses trains you to catch your own.</li>
+      <li>Run the "flag, then fix" audit on one real way you used AI on people-work recently. Anonymize before you write anything down.</li>
+      <li>Finalize your one-page people-data + bias checklist and share it with every manager on your team.</li>
+      <li>Confirm your escalation path: who in HR or legal do you raise a fairness or data concern to, and how fast?</li>
+      <li>Optional: pick one recent people recommendation and run the swap test on it. Notice whether it holds when the name changes.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public responsible-AI and people-data practice. Legal and HR specifics stay with qualified counsel. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">People-data + HR/employment (GDPR/PDPA) canon</span><span class="note">Parts 1-2 · privacy, the lines, the safe moves</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Responsible-AI leadership canon - bias, accountability</span><span class="note">Parts 1, 3 · bias in people decisions, the checks</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Responsible-AI - transparency + disclosure</span><span class="note">Part 1 · disclosure; fuller depth in leader session a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Legal / HR compliance specifics</span><span class="note">Part 3 · escalate to qualified counsel - not covered here</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You want AI's help comparing two reports for a promotion. What is the people-data line?</p>
+      <button class="qopt" type="button">A · Paste both real names, ratings, and salaries into a free chatbot - it is faster</button>
+      <button class="qopt" type="button">B · Let the AI pick, then just sign off on it</button>
+      <button class="qopt" type="button">C · Strip names and personal details first, and never let real people-data touch an unapproved tool</button>
+      <p class="qwhy">Rail two: employee names, ratings, and salary are protected people-data and never belong in a consumer tool. Anonymize to think, or use an HR-approved tool for anything identifiable.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · How does bias usually show up in an AI people recommendation?</p>
+      <button class="qopt" type="button">A · The AI refuses to answer, so you notice something is wrong</button>
+      <button class="qopt" type="button">B · A biased leaning arrives as a confident, reasonable-sounding recommendation - laundered into something that looks objective</button>
+      <button class="qopt" type="button">C · The AI always flags its own bias for you</button>
+      <p class="qwhy">AI reflects patterns and hands them back with polish. Catch it with two checks: consistency across the team, and the swap test - would it hold if the name or background changed?</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A people decision could have legal or fairness consequences and you are not sure it is clean. What do you do?</p>
+      <button class="qopt" type="button">A · Escalate to HR or legal early, before the decision is made</button>
+      <button class="qopt" type="button">B · Trust the AI's confident answer and move on</button>
+      <button class="qopt" type="button">C · Decide quietly and hope no one asks</button>
+      <p class="qwhy">You are the last line of defense, not the whole legal system. Raising a fairness or data concern early protects your person, your team, and you - it is strength, not weakness.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The hard frame</b><span>you are the last line of defense for your people's data and for fairness in people decisions.</span></div>
+      <div class="cheat-item"><b>The four risks</b><span>people-data privacy, bias in people decisions, disclosure, shadow-AI. Name them to catch them.</span></div>
+      <div class="cheat-item"><b>Never</b><span>put real people-data in consumer tools; let AI decide a rating/promotion/PIP; skip the bias check.</span></div>
+      <div class="cheat-item"><b>Before you paste</b><span>"Real person's data in here? Am I letting AI decide?" If yes - anonymize, take back the call.</span></div>
+      <div class="cheat-item"><b>Bias, concretely</b><span>confident laundering, uneven language, proxy signals. It looks objective - that is the trap.</span></div>
+      <div class="cheat-item"><b>The two checks</b><span>consistency across the team, and the swap test - would it hold if the name changed?</span></div>
+      <div class="cheat-item"><b>Escalate when</b><span>legal/fairness stakes and you are unsure; the swap test wobbles; data moved where it should not.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b10 - the finale: your AI-augmented operating model and an impact scorecard that ties b1-b9 together.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 9 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-team-enablement.html">← Previous: Team enablement &amp; upskilling</a> &nbsp;·&nbsp; <a href="b10-leading-augmented-teams.html">Next: Leading AI-augmented teams →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

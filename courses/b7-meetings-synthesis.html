@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 7 · Meetings &amp; synthesis - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 7 of 10</div>
+    <h1>Meetings &amp; synthesis: <span class="accent">turn a meeting into decisions and actions</span></h1>
+    <p class="sub">Most meetings end and nothing moves - no clear decision, no owned action, a summary nobody wrote. AI notetakers and assistants fix the record-keeping so you can run the room. Tonight you turn a messy transcript into a crisp summary, decisions, and owned actions, and build a reusable meeting kit. The catch: notetakers capture people-data, so you govern where it goes.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude + notetaker</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Meetings, prep, and the consent note</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: transcript to actions + a meeting kit</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where meetings go to be wasted</h2>
+    </div>
+    <p class="lede">A manager spends hours in meetings, and the value leaks out the moment they end: who agreed to what, what we actually decided, who owns the next step. AI is unusually good here - it listens, summarizes, and pulls out decisions and actions while you stay present and run the conversation. But the same tools record real people saying real things, so this session pairs the technique with the consent-and-governance habit that has to come with it.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A meeting turned into a clean summary with decisions and owned action items, a reusable meeting kit (agenda template + pre-read prompt + summary-to-actions prompt) you can use every week, and a clear habit for notetaker consent and where the recordings live.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: MEETINGS INTO DECISIONS + ACTIONS ============ -->
+  <section class="section" id="meetings-to-actions">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers management practice - meetings</span>
+      <h2>Meetings into decisions and actions <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A notetaker or assistant can turn an hour of talk into a summary, a list of decisions, and owned action items in seconds - the record-keeping that used to eat your attention or never got done. That frees you to do the human part: run the room, read it, and drive to real decisions. The tool captures; you still lead and own the follow-through.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A meeting flow: agenda and pre-read feed the meeting, an AI notetaker turns it into notes, which become decisions and owned actions, driving follow-up">
+        <style>
+          .b7xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b7xI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b7xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b7xXi { font: 400 12.5px Inter, sans-serif; fill: #12211C; }
+          .b7xN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <defs>
+          <marker id="b7xAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#C3D2CB"/>
+          </marker>
+        </defs>
+        <rect x="24" y="60" width="150" height="72" rx="12" fill="#A7D4C4"/>
+        <text class="b7xI" x="99" y="90" text-anchor="middle">Agenda +</text>
+        <text class="b7xI" x="99" y="110" text-anchor="middle">pre-read</text>
+        <line x1="176" y1="96" x2="212" y2="96" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="214" y="60" width="150" height="72" rx="12" fill="#3E8E72"/>
+        <text class="b7xT" x="289" y="100" text-anchor="middle">The meeting</text>
+        <line x1="366" y1="96" x2="402" y2="96" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="404" y="60" width="150" height="72" rx="12" fill="#1B5E4B"/>
+        <text class="b7xT" x="479" y="90" text-anchor="middle">AI notes</text>
+        <text class="b7xX" x="479" y="110" text-anchor="middle">summary draft</text>
+        <line x1="556" y1="96" x2="592" y2="96" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="594" y="60" width="150" height="72" rx="12" fill="#14332B"/>
+        <text class="b7xT" x="669" y="90" text-anchor="middle">Decisions +</text>
+        <text class="b7xT" x="669" y="110" text-anchor="middle">owned actions</text>
+        <line x1="669" y1="134" x2="669" y2="170" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="594" y="172" width="150" height="56" rx="12" fill="#A7D4C4"/>
+        <text class="b7xI" x="669" y="205" text-anchor="middle">Follow-up</text>
+        <rect x="24" y="250" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b7xN" x="48" y="262">The tool records and drafts; you run the room and own the follow-through.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a meeting flows from prep to owned actions, with AI handling the record</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Summary, decisions, actions - the three outputs<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A meeting has three useful outputs, and AI can draft all three from a transcript or a set of notes. Your job is to make the room produce real decisions in the first place, then verify what the AI pulled out.</p>
+        <ul>
+          <li><strong>The summary</strong> - what was discussed, in a few lines someone who missed it can read. AI does this well; skim it for accuracy.</li>
+          <li><strong>The decisions</strong> - what we actually agreed. If the AI cannot find a clear decision, that is a signal the meeting did not make one.</li>
+          <li><strong>The owned actions</strong> - each next step with a name and a rough when. "Someone should" is not an action; a named owner is.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI) - three outputs from notes</span>Here are my rough notes from a team meeting: [paste anonymized notes]. Give me three sections: a 4-line summary, a list of decisions we made, and action items - each with an owner and a suggested due date. Flag anything that sounds like an open question rather than a decision.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The weekly that finally moved.</strong> A team's staff meeting had run for a year with no written record - the same topics resurfaced every week. The manager started dropping the notetaker transcript into an assistant for a summary, decisions, and owned actions, sent within the hour. Nothing about the discussion changed; what changed was that decisions now stuck and owners knew they were owners.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>You still own the follow-through<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The AI draft is a starting point, not the record. Two things stay yours.</p>
+        <ul>
+          <li><strong>Verify before you send.</strong> Notetakers mishear names, attribute the wrong person, and occasionally invent a decision that was only floated. Read it once against your memory.</li>
+          <li><strong>Chase the actions.</strong> A list of owned actions only matters if you follow up. The tool remembers; accountability is a human habit.</li>
+        </ul>
+        <p>Rail one in this session: AI captures and drafts, the manager runs the room and owns the follow-up. The neat summary is worthless if nobody does the next thing.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: PREP + FACILITATE ============ -->
+  <section class="section" id="prep-facilitate">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers management practice - facilitation</span>
+      <h2>Prep and facilitate better <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The best way to fix a meeting is upstream. AI drafts the agenda, turns a pile of pre-reads into a short brief, and hands you facilitation prompts, so the time in the room goes to decisions instead of status updates everyone could have read. Synthesize the inputs before people arrive.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Agendas, pre-reads, and facilitation prompts<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI helps at every stage of the meeting, not just the notes at the end. Point it at the prep.</p>
+        <table class="clean">
+          <thead><tr><th>Stage</th><th>How AI helps</th></tr></thead>
+          <tbody>
+            <tr><td>Set the agenda</td><td>Draft a timed agenda from your goal - decisions to make, not topics to cover</td></tr>
+            <tr><td>Prepare the pre-read</td><td>Boil a stack of updates into a one-page brief people actually read first</td></tr>
+            <tr><td>Synthesize inputs</td><td>Pull themes and open questions out of survey answers or status notes beforehand</td></tr>
+            <tr><td>Facilitate</td><td>Suggest questions to open discussion, surface dissent, and force a decision</td></tr>
+            <tr><td>Close</td><td>Draft the summary, decisions, and owned actions to send while it is fresh</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Turn status into decisions</strong>
+          If your agenda is a list of updates, send them as a written pre-read instead and reclaim the meeting for the two or three real decisions. Ask AI: "which of these agenda items could be an async update rather than a live discussion?"
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Synthesize before, decide during<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The move that saves the most time is synthesis before the meeting. If you have collected input - a survey, a round of written comments, three teams' status - drop it into an assistant and ask for the themes, the disagreements, and the decisions that need making. Now the room debates a tight set of real questions instead of hearing five people read their update aloud.</p>
+        <div class="prompt-box good"><span class="label">★ Pre-meeting synthesis prompt</span>Here is input from the team ahead of our planning meeting: [paste anonymized comments]. Group it into 3-4 themes, list the points of disagreement, and give me the 3 decisions we most need to make in the room. Suggest one framing question for each decision.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CONSENT + GOVERNANCE ============ -->
+  <section class="section" id="consent-governance">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers people-data + HR/employment canon</span>
+      <h2>The consent and governance note <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">A notetaker is a recording device with a memory. It captures colleagues' voices, opinions, and sometimes sensitive people-data, and it stores a transcript somewhere. That is people-data, and the manager owns how it is handled - consent, storage, and what ends up in the summary you forward.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three governance checks for a notetaker: consent to record, where the transcript lives, and what people-data goes in the summary you send">
+        <style>
+          .b7gT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b7gI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b7gX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b7gXi { font: 400 12.5px Inter, sans-serif; fill: #12211C; }
+          .b7gN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <rect x="30" y="46" width="255" height="120" rx="12" fill="#1B5E4B"/>
+        <text class="b7gT" x="52" y="82">1 · Consent to record</text>
+        <text class="b7gX" x="52" y="106">say a notetaker is on;</text>
+        <text class="b7gX" x="52" y="126">check policy + local law;</text>
+        <text class="b7gX" x="52" y="146">let people opt out</text>
+        <rect x="312" y="46" width="255" height="120" rx="12" fill="#3E8E72"/>
+        <text class="b7gT" x="334" y="82">2 · Where it lives</text>
+        <text class="b7gX" x="334" y="106">know where transcripts</text>
+        <text class="b7gX" x="334" y="126">and recordings are stored,</text>
+        <text class="b7gX" x="334" y="146">who can see them, how long</text>
+        <rect x="594" y="46" width="255" height="120" rx="12" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b7gI" x="616" y="82">3 · What you send</text>
+        <text class="b7gXi" x="616" y="106">strip sensitive people-data</text>
+        <text class="b7gXi" x="616" y="126">from the summary; share</text>
+        <text class="b7gXi" x="616" y="146">only what belongs to all</text>
+        <rect x="30" y="200" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b7gN" x="54" y="212">Notetakers capture people-data - consent, storage, and the summary are the manager's to govern.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three checks for any notetaker: consent, storage, and what leaves the room</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Consent, storage, and what goes in the summary<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Before you let a notetaker into a meeting, three things are on you.</p>
+        <ul>
+          <li><strong>Consent to record.</strong> Tell people a notetaker is running, check your org's policy and local law, and give anyone a way to opt out. A recording nobody agreed to is a problem, not a convenience.</li>
+          <li><strong>Where it lives.</strong> Know where the transcript and any recording are stored, who can access them, and how long they are kept. If you cannot answer that, do not run the tool on a sensitive conversation.</li>
+          <li><strong>What you send.</strong> The auto-summary can contain a stray sensitive comment or an off-hand remark about a person. Read it and strip anything that should not go to the whole distribution before you forward.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Never on the sensitive ones</strong>
+          One-to-ones, performance conversations, and anything with HR or legal weight should not go through a consumer notetaker at all. The rail from session b1 holds: real people-data lives in approved tools, or the conversation stays off the record.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The two rails, in meetings<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Both rails show up in this session, side by side.</p>
+        <ul>
+          <li><strong>AI advises, you decide and own it.</strong> The notetaker drafts the record and the assistant drafts the actions - you verify them, run the room, and chase the follow-through.</li>
+          <li><strong>Protect people-data.</strong> A notetaker captures colleagues' words. Consent, storage, and what leaves the room are the manager's responsibility, and sensitive conversations stay out of consumer tools.</li>
+        </ul>
+        <p>Say it plainly to your team once: "we use a notetaker, here is what it records and where it goes, and you can ask me to turn it off." That single sentence is most of the governance.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Transcript to summary, decisions, and owned actions <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The core move of the session. Take a meeting transcript - anonymized or synthetic - and turn it into a clean summary, a list of decisions, and owned action items, then verify what the AI produced against what you know happened.</p>
+
+    <div class="steps">
+      <div class="step"><p>Get a transcript. Use a synthetic one (write four short lines of a fake planning meeting) or a real one with every name replaced by a role - "the PM", "the designer" (rail two).</p></div>
+      <div class="step"><p>Run the summary-to-actions prompt below. Ask for three sections: a short summary, the decisions made, and action items with an owner and a due date.</p></div>
+      <div class="step"><p><strong>Verify.</strong> Read each decision - is it something you actually agreed, or something the AI inferred? Check every action has a real owner. This is rail one: you own the record.</p></div>
+      <div class="step"><p>Fix the gaps. Where the AI found "an open question" instead of a decision, that is a real meeting problem to close, not a summary to patch over.</p></div>
+      <div class="step"><p>Draft the follow-up message. Ask the AI to turn the verified output into a short note you would actually send to the team.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The summary-to-actions prompt</span>Here is a meeting transcript. Names have been replaced with roles.
+[paste anonymized / synthetic transcript]
+
+Give me three sections:
+1) Summary - 4 to 5 lines, readable by someone who missed it.
+2) Decisions - what we actually agreed. If something was only floated, put it under
+   "open questions" instead of decisions.
+3) Action items - each with an owner (by role) and a suggested due date.
+
+Then draft a short follow-up message I could send to the team with the decisions and
+actions. Flag anything you were unsure about so I can verify it.</div>
+
+    <div class="callout tip">
+      <strong>Why verify matters here</strong>
+      A confident summary that quietly invents a decision is worse than no summary - people act on it. Read the decisions section against your own memory every time. The AI drafts fast; you are the one who signs off that it is true.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Build a reusable meeting kit <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Three saved prompts you will reuse every week: an agenda template, a pre-read synthesis prompt, and the summary-to-actions prompt from demo one. Build the kit once, run better meetings forever.</p>
+
+    <div class="steps">
+      <div class="step"><p>Ask AI for an <strong>agenda template</strong> built around decisions - a timed structure with a stated goal, the decisions to make, and a slot for owned actions at the end.</p></div>
+      <div class="step"><p>Save the <strong>pre-read synthesis prompt</strong> from Part 2 - the one that boils collected input into themes, disagreements, and the decisions to make in the room.</p></div>
+      <div class="step"><p>Save the <strong>summary-to-actions prompt</strong> from demo one as the third tool in the kit.</p></div>
+      <div class="step"><p>Add your consent line - the one sentence you say when a notetaker is running - so governance travels with the kit.</p></div>
+      <div class="step"><p>Keep the three prompts plus the consent line somewhere you will find them - a note, a doc, a saved prompt. Reuse beats re-inventing every Monday.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The meeting-kit prompt</span>Help me build a reusable meeting kit I can use every week. Give me:
+1) A timed agenda template built around decisions, not status - with a goal line, the
+   decisions to make, and an action-items slot at the end.
+2) A short pre-read synthesis prompt I can paste collected input into.
+3) A summary-to-actions prompt I run on the transcript afterward.
+Keep each one plain and copy-pasteable. Also suggest a single sentence I can say at the
+top of a meeting to tell people a notetaker is recording and that they can opt out.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The kit that shortened every meeting.</strong> A team lead saved three prompts and a consent line into one note. Agendas got tighter because they were built around decisions; pre-reads meant status stopped eating the room; summaries went out within the hour with owners named. The meetings themselves got 15 minutes shorter, and people stopped asking "wait, what did we decide?"</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the summary-to-actions prompt on one real (anonymized) meeting this week. Verify the decisions against your memory before you send anything.</li>
+      <li>Finish your meeting kit - the three saved prompts plus your consent line - and use the agenda template on your next meeting.</li>
+      <li>Do the synthesis move once: collect written input before a meeting and boil it down to themes and decisions, so the room debates instead of updates.</li>
+      <li>Check where your notetaker stores transcripts and who can see them. If you cannot answer, find out before you record another sensitive conversation.</li>
+      <li>Optional: pick one recurring meeting and ask AI which agenda items could become an async update instead.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from widely used management practice on meetings and facilitation, plus the people-data rail. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Management practice canon - meetings</span><span class="note">Part 1 · summary, decisions, owned actions</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Management practice canon - facilitation</span><span class="note">Part 2 · agendas, pre-reads, synthesis</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">People-data + HR/employment canon</span><span class="note">Part 3 · notetaker consent, storage; depth in b9</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Responsible-AI leadership canon</span><span class="note">Part 3 · verify-before-you-send, ownership</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What are the three useful outputs AI can pull from a meeting?</p>
+      <button class="qopt" type="button">A · A transcript, a recording, and a calendar invite</button>
+      <button class="qopt" type="button">B · A summary, the decisions made, and owned action items with a name and a rough when</button>
+      <button class="qopt" type="button">C · A word count, a sentiment score, and a highlight reel</button>
+      <p class="qwhy">A meeting is worth capturing as a summary, the decisions actually agreed, and action items each with an owner. "Someone should" is not an action - a named owner is.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What is the best way to make a meeting go to decisions, not status?</p>
+      <button class="qopt" type="button">A · Make it longer so everyone can update</button>
+      <button class="qopt" type="button">B · Skip the agenda and let it flow</button>
+      <button class="qopt" type="button">C · Synthesize inputs before the meeting so the room debates a tight set of real decisions</button>
+      <p class="qwhy">Fix the meeting upstream: use AI to draft a decisions-based agenda and boil collected input into themes and the decisions to make, so status moves to a pre-read.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A notetaker is running in your team meeting. What is on you as the manager?</p>
+      <button class="qopt" type="button">A · Consent to record, knowing where the transcript lives, and what people-data goes in the summary you send</button>
+      <button class="qopt" type="button">B · Nothing - the tool handles privacy automatically</button>
+      <button class="qopt" type="button">C · Only remembering to hit record</button>
+      <p class="qwhy">Notetakers capture people-data. Consent to record, storage and access, and stripping sensitive detail from the summary are the manager's to govern - and sensitive conversations stay out of consumer tools.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three outputs</b><span>summary, decisions, owned actions. If AI can't find a decision, the meeting didn't make one.</span></div>
+      <div class="cheat-item"><b>Owned action</b><span>a next step with a name and a rough when. "Someone should" is not an action.</span></div>
+      <div class="cheat-item"><b>Verify before you send</b><span>notetakers mishear and sometimes invent a decision. Read it against your memory. Rail one.</span></div>
+      <div class="cheat-item"><b>Prep beats notes</b><span>AI drafts agendas and pre-reads; synthesize inputs before, so the room decides not updates.</span></div>
+      <div class="cheat-item"><b>Turn status async</b><span>send updates as a written pre-read; reclaim the meeting for the real decisions.</span></div>
+      <div class="cheat-item"><b>Consent to record</b><span>tell people the notetaker is on, check policy + law, let them opt out.</span></div>
+      <div class="cheat-item"><b>Govern the record</b><span>know where transcripts live and who sees them; strip sensitive people-data from summaries.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b8 - team enablement: build a prompt library and a 30-day plan so your team uses AI well.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 7 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-delegation.html">← Previous: Delegation</a> &nbsp;·&nbsp; <a href="b8-team-enablement.html">Next: Team enablement &amp; upskilling →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

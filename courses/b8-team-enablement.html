@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 8 · Team enablement &amp; upskilling - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 8 of 10</div>
+    <h1>Team enablement &amp; upskilling: <span class="accent">build a team that uses AI well</span></h1>
+    <p class="sub">The point of this whole track is not to make you the best AI user on the team - it is to build a team that uses AI well, safely, and out in the open. Tonight you start a shared prompt library your team can actually use, and draft a 30-day enablement plan: model good use, share prompts, set guardrails, celebrate learning, and kill the shadow-AI risk by giving people a sanctioned path.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Enabler, capability, and sustaining it</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: prompt library + 30-day plan</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Your job is the team's capability, not your own</h2>
+    </div>
+    <p class="lede">By now you can use AI on decisions, communication, planning, feedback, delegation, and meetings. This session flips the lens outward. A manager who is a brilliant AI user but leads a team that avoids it - or worse, uses it in secret with no guardrails - has failed at the part that scales. Enablement is the leadership move: model it, share what works, set the rails, and make good use visible so it spreads.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A starter team prompt library - five role-relevant prompts each with a guardrail - and a 30-day team enablement plan covering how you will model good use, share the library, set guardrails, land quick wins, and keep a cadence going so it sticks.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE MANAGER AS ENABLER ============ -->
+  <section class="section" id="manager-as-enabler">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers reskilling programs</span>
+      <h2>The manager as enabler <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">You do not have to be the team's best prompter. You have to build a team that uses AI well - and that is a different, more durable skill. It runs on a loop: you model good use, share prompts that work, set clear guardrails, notch quick wins, and capability compounds from there.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An enablement loop: model good use, share the prompt library, set guardrails, land quick wins, growing team capability, which feeds back into modeling">
+        <style>
+          .b8lT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b8lI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b8lN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <defs>
+          <marker id="b8lAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#C3D2CB"/>
+          </marker>
+        </defs>
+        <rect x="24" y="70" width="140" height="66" rx="12" fill="#1B5E4B"/>
+        <text class="b8lT" x="94" y="108" text-anchor="middle">Model use</text>
+        <line x1="166" y1="103" x2="200" y2="103" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b8lAh)"/>
+        <rect x="202" y="70" width="140" height="66" rx="12" fill="#3E8E72"/>
+        <text class="b8lT" x="272" y="98" text-anchor="middle">Share the</text>
+        <text class="b8lT" x="272" y="118" text-anchor="middle">library</text>
+        <line x1="344" y1="103" x2="378" y2="103" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b8lAh)"/>
+        <rect x="380" y="70" width="140" height="66" rx="12" fill="#A7D4C4"/>
+        <text class="b8lI" x="450" y="108" text-anchor="middle">Guardrails</text>
+        <line x1="522" y1="103" x2="556" y2="103" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b8lAh)"/>
+        <rect x="558" y="70" width="140" height="66" rx="12" fill="#14332B"/>
+        <text class="b8lT" x="628" y="108" text-anchor="middle">Quick wins</text>
+        <line x1="700" y1="103" x2="734" y2="103" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b8lAh)"/>
+        <rect x="736" y="70" width="120" height="66" rx="12" fill="#3E8E72"/>
+        <text class="b8lT" x="796" y="98" text-anchor="middle">Team</text>
+        <text class="b8lT" x="796" y="118" text-anchor="middle">capability</text>
+        <path d="M796,138 L796,180 L94,180 L94,138" fill="none" stroke="#C3D2CB" stroke-width="2.5" marker-end="url(#b8lAh)"/>
+        <rect x="24" y="216" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b8lN" x="48" y="228">Capability feeds back into modeling - the loop compounds each time round.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the enablement loop that turns one manager's habit into a team capability</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Model, share, guardrail, celebrate<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Enablement is four repeatable behaviors, not a one-off training day. Do them consistently and the team's capability grows on its own.</p>
+        <ul>
+          <li><strong>Model good use.</strong> Show your work. When AI helped you draft or stress-test something, say so, and show the prompt. People copy what their manager visibly does.</li>
+          <li><strong>Share prompts.</strong> A prompt that worked for you works for the team. Put it somewhere shared so nobody reinvents it.</li>
+          <li><strong>Set guardrails.</strong> The two rails from b1 - AI advises, you decide and own it; protect people-data - are the guardrails. Make them explicit so people feel safe to try.</li>
+          <li><strong>Celebrate learning.</strong> Praise the person who found a useful prompt or caught an AI mistake. What gets celebrated gets repeated.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI) - a modeling habit</span>I want to model good AI use for my team. Give me three simple, repeatable ways to show my team how I use AI in my own work each week - without turning it into extra process. Keep it lightweight and specific to a team lead.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The manager who shared her screen.</strong> A team lead started ending updates with "here is the prompt I used for this." Within a month, three people on her team had adapted her prompts and shared their own back. She was not the best prompter in the room by then - and that was exactly the point. Her job was the team's capability, not her own.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>You are the enabler, not the expert<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two traps catch managers here. The first is trying to be the team's AI expert - you will not scale, and you do not need to. The second is doing nothing and hoping people figure it out - they will, but in the shadows, with no guardrails. The enabler's job sits in the middle: create the conditions for the team to get good, and get out of the way.</p>
+        <p>Rail one applies to you as a leader too: AI advises your team, each person still owns their own judgment and output. Enablement is about capability with accountability, never handing the thinking to the tool.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: BUILDING CAPABILITY ============ -->
+  <section class="section" id="building-capability">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers reskilling programs</span>
+      <h2>Building capability <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Capability is built with a handful of concrete moves: a shared prompt library, safe places to practice, a quick-win use case for each role, the two rails as guardrails, and patient coaching for the skeptics. Each one has an effect you can see.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The moves that build a capable team<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Pick the moves that fit your team and run them. None of them require you to be an expert - they require you to be deliberate.</p>
+        <table class="clean">
+          <thead><tr><th>Move</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Shared prompt library</td><td>Nobody reinvents a good prompt; the team's best use spreads by default</td></tr>
+            <tr><td>Safe sandbox to practice</td><td>People try AI on low-stakes work without fear of breaking something</td></tr>
+            <tr><td>Quick-win use case per role</td><td>Each person sees AI help their actual job in week one, not in theory</td></tr>
+            <tr><td>The two rails as guardrails</td><td>People feel safe to use AI because the lines are clear</td></tr>
+            <tr><td>Coach the skeptics</td><td>Doubters become steady users when a real win lands, not when pushed</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>One quick win per role</strong>
+          The fastest way to convert a team is a use case tied to each person's real work - the drafting task they hate, the synthesis that eats their Friday. Land one visible win per role and adoption stops being a memo and becomes a habit.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Guardrails make people braver, not smaller<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Managers sometimes fear that guardrails will discourage use. The opposite is true - clear lines are what let people try. When the team knows exactly what is safe (anonymized thinking, drafting, synthesis) and what is off-limits (customer or people-data in consumer tools, letting AI make the call), they experiment inside the safe zone instead of freezing at the edge.</p>
+        <div class="prompt-box good"><span class="label">★ Coach-the-skeptic prompt</span>One person on my team is skeptical of AI and reluctant to try it. Help me find one low-stakes, high-relevance quick win for their role [describe the role], and suggest how I could introduce it without making them feel pushed or judged.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: SUSTAINING IT ============ -->
+  <section class="section" id="sustaining">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers reskilling programs</span>
+      <h2>Sustaining it <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">A launch is easy; a habit is hard. Enablement sticks when good AI use is visible and rewarded, when there is a regular cadence for sharing what works, and when you close off the shadow-AI risk - people using unapproved tools because no sanctioned path exists.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three ways to sustain enablement: make good use visible and rewarded, keep a sharing cadence, and give a sanctioned path so shadow AI does not fill the gap">
+        <style>
+          .b8sT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b8sI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b8sX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b8sXi { font: 400 12.5px Inter, sans-serif; fill: #12211C; }
+          .b8sN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <rect x="30" y="46" width="255" height="120" rx="12" fill="#1B5E4B"/>
+        <text class="b8sT" x="52" y="82">Make it visible</text>
+        <text class="b8sX" x="52" y="106">celebrate good use;</text>
+        <text class="b8sX" x="52" y="126">what gets rewarded</text>
+        <text class="b8sX" x="52" y="146">gets repeated</text>
+        <rect x="312" y="46" width="255" height="120" rx="12" fill="#3E8E72"/>
+        <text class="b8sT" x="334" y="82">Keep a cadence</text>
+        <text class="b8sX" x="334" y="106">a regular slot to share</text>
+        <text class="b8sX" x="334" y="126">what worked; the library</text>
+        <text class="b8sX" x="334" y="146">grows every week</text>
+        <rect x="594" y="46" width="255" height="120" rx="12" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b8sI" x="616" y="82">Give a real path</text>
+        <text class="b8sXi" x="616" y="106">no sanctioned tool means</text>
+        <text class="b8sXi" x="616" y="126">shadow AI fills the gap -</text>
+        <text class="b8sXi" x="616" y="146">approve one, publish it</text>
+        <rect x="30" y="200" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b8sN" x="54" y="212">Shadow AI is a symptom of no sanctioned path - close the gap, do not just ban the tool.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three ways enablement sticks: visible, cadenced, and with a real sanctioned path</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Visible, cadenced, and no shadow AI<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three things keep enablement alive past the first month.</p>
+        <ul>
+          <li><strong>Make good use visible and rewarded.</strong> Call out the person who found a clever prompt or caught an AI error. Recognition is the cheapest, strongest driver of repeat behavior.</li>
+          <li><strong>Keep a cadence.</strong> A recurring five-minute "what worked with AI this week" slot keeps the library growing and normalizes sharing. Small and regular beats a big one-off.</li>
+          <li><strong>Close the shadow-AI gap.</strong> When people use unapproved tools, it is almost always because there is no sanctioned path. Banning drives it underground; giving them an approved tool and clear guardrails brings it into the light.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Shadow AI is a signal, not a crime</strong>
+          If your team is quietly pasting work into random tools, that is demand with no supply. The fix is a sanctioned path plus the two rails, not a crackdown. People want to do good work - give them a safe way to.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The two rails, at team scale<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Everything you enable rides on the same two rails, now applied across a team.</p>
+        <ul>
+          <li><strong>AI advises, each person decides and owns it.</strong> Enablement grows capability, not dependence. Every team member still owns their judgment and output - AI is the assistant, never the author of record.</li>
+          <li><strong>Protect people-data and customer data.</strong> The guardrails you publish are what make a sanctioned path safe. Clear lines let people experiment freely inside them.</li>
+        </ul>
+        <p>You will pull all of this together in b9 (risk and ethics in practice) and the finale b10, where the team's operating model and cadence become the way you actually run.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build a starter team prompt library <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Five role-relevant prompts, each with a guardrail, in one shared place. This is the single most useful artifact you can hand a team - the best use, ready to copy, with the lines drawn.</p>
+
+    <div class="steps">
+      <div class="step"><p>List the roles on your team and the one task each does most that AI could help with - drafting, synthesis, planning, first-pass analysis.</p></div>
+      <div class="step"><p>Run the library prompt below. Ask for five prompts, one per role or task, each written to be copy-pasteable by someone who is not a prompt expert.</p></div>
+      <div class="step"><p><strong>Add a guardrail to each.</strong> Every prompt gets a one-line note - what not to put in it (people-data, customer data) and the reminder that the human owns the output. That is rail two, baked in.</p></div>
+      <div class="step"><p>Edit for your team's real work. Swap the generic tasks for the actual ones your people do. The AI draft is the skeleton; your knowledge of the team is the value.</p></div>
+      <div class="step"><p>Put it somewhere shared and tell the team it exists. A library nobody knows about is not a library.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The prompt-library prompt</span>Help me build a starter prompt library for my team. Here are the roles and their most
+common task: [list, e.g. "PM - write a status update; analyst - summarize findings;
+designer - draft a brief"].
+
+For each, give me:
+- A clear, copy-pasteable prompt a non-expert could use right away.
+- A one-line guardrail: what NOT to put in it (people-data, customer data) and a
+  reminder that the human owns and checks the output.
+
+Give me 5 total. Keep them plain and practical, not clever.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Five prompts that changed a team's week.</strong> A manager built a five-prompt library - one for status updates, one for meeting synthesis, one for first-draft analysis, one for briefs, one for tough emails - each with a guardrail line. She shared it in the team channel. Within two weeks it had grown to eleven prompts, all contributed by the team. The library was the seed; the team grew it.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Draft a 30-day team enablement plan <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">A simple month-long plan across five moves: how you will model good use, share the library, land quick wins per role, set the guardrails, and keep a cadence going. Concrete enough to start Monday.</p>
+
+    <div class="steps">
+      <div class="step"><p>Set the frame: your team size, the tools you have (or want) approved, and where you are today - from "nobody uses it" to "everyone secretly does."</p></div>
+      <div class="step"><p>Run the plan prompt below. Ask for a 30-day plan organized by the five moves: model, share, quick wins, guardrails, cadence.</p></div>
+      <div class="step"><p>Make it real. Pick actual dates, the real quick win per role, and the recurring slot where the team shares what worked.</p></div>
+      <div class="step"><p>Add your shadow-AI answer. Name the sanctioned tool and path so people never need to go around you.</p></div>
+      <div class="step"><p>Keep it to one page. A plan you will actually run beats a thorough one you will not.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The 30-day enablement plan prompt</span>Draft a one-page 30-day AI enablement plan for my team.
+Context: [team size], approved tools are [list, or "none yet"], and right now [describe
+where you are - e.g. "a few people use AI, most are unsure, no shared guardrails"].
+
+Organize it around five moves:
+1) Model - how I visibly use AI in my own work.
+2) Share - stand up and grow a shared prompt library.
+3) Quick wins - one relevant use case per role in week one.
+4) Guardrails - the two rails (AI advises + I own it; protect people-data) made explicit.
+5) Cadence - a recurring slot to share what worked and keep it alive.
+
+Give concrete weekly actions and address shadow AI - how a sanctioned path removes the
+reason people use unapproved tools. Keep it to one page.</div>
+
+    <div class="callout tip">
+      <strong>Why 30 days</strong>
+      A month is long enough to build a habit and short enough to actually finish. Enablement is not a launch event; it is a loop you keep running. The plan just gets the flywheel turning - after that, cadence carries it.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish your five-prompt library, each with a guardrail line, and put it somewhere the team can see and add to.</li>
+      <li>Finalise your 30-day plan and pick the first quick win - one role, one real task, this week.</li>
+      <li>Model it once: share a prompt you used, out loud, with your team. Watch what happens.</li>
+      <li>Name your sanctioned path. If there is no approved tool yet, that is your shadow-AI risk - raise it (the leader session a5 on adoption helps).</li>
+      <li>Optional: set up the recurring "what worked with AI this week" slot so the library keeps growing without you pushing it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public reskilling and AI-adoption programs, plus the two rails from this track. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Reskilling &amp; upskilling programs</span><span class="note">Part 1 · the manager as enabler</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI adoption &amp; change-management programs</span><span class="note">Part 2 · capability-building moves</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Reskilling programs - sustaining adoption</span><span class="note">Part 3 · cadence, shadow-AI risk</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Responsible-AI leadership canon</span><span class="note">Guardrails · the two rails at team scale</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What is the manager's real job in AI enablement?</p>
+      <button class="qopt" type="button">A · To be the single best AI user on the team</button>
+      <button class="qopt" type="button">B · To do all the AI work so the team doesn't have to</button>
+      <button class="qopt" type="button">C · To build a team that uses AI well - model it, share prompts, set guardrails, celebrate learning</button>
+      <p class="qwhy">Enablement scales; being the resident expert does not. The manager creates the conditions - modeling, a shared library, clear guardrails, recognition - and lets the team's capability grow.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · What is the fastest way to convert a skeptical team to AI?</p>
+      <button class="qopt" type="button">A · Land one relevant quick win per role, tied to their real work</button>
+      <button class="qopt" type="button">B · Mandate it and track daily usage</button>
+      <button class="qopt" type="button">C · Send a long memo about the benefits</button>
+      <p class="qwhy">A visible win on a task someone actually cares about beats mandates and memos. Guardrails make people brave enough to try; a real quick win makes them stay.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Your team is using unapproved AI tools in secret. What does that signal?</p>
+      <button class="qopt" type="button">A · That you should ban all AI immediately</button>
+      <button class="qopt" type="button">B · Shadow AI - there is demand with no sanctioned path; give an approved tool and clear guardrails</button>
+      <button class="qopt" type="button">C · That the team cannot be trusted</button>
+      <p class="qwhy">Shadow AI is a symptom of no sanctioned path, not a discipline problem. Banning drives it underground; an approved tool plus the two rails brings it into the light.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Your job</b><span>not the best AI user - build a team that uses AI well. Enablement scales; expertise doesn't.</span></div>
+      <div class="cheat-item"><b>The loop</b><span>model use → share the library → guardrails → quick wins → capability, and round again.</span></div>
+      <div class="cheat-item"><b>Model good use</b><span>show your prompts out loud. People copy what their manager visibly does.</span></div>
+      <div class="cheat-item"><b>Quick win per role</b><span>one relevant win in week one beats any mandate or memo. Tie it to real work.</span></div>
+      <div class="cheat-item"><b>Guardrails = bravery</b><span>clear lines (the two rails) let people experiment inside the safe zone, not freeze at the edge.</span></div>
+      <div class="cheat-item"><b>Coach skeptics</b><span>a real win converts doubters; pushing doesn't. Low-stakes, high-relevance, no judgment.</span></div>
+      <div class="cheat-item"><b>Shadow AI</b><span>a symptom of no sanctioned path. Give an approved tool + guardrails, don't just ban.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b9 - risk &amp; ethics in practice: people-data privacy and bias in people decisions.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 8 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-meetings-synthesis.html">← Previous: Meetings &amp; synthesis</a> &nbsp;·&nbsp; <a href="b9-risk-ethics-practice.html">Next: Risk &amp; ethics in practice →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

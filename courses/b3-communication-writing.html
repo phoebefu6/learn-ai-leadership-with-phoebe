@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 3 · Communication &amp; writing - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 3 of 10</div>
+    <h1>Communication &amp; writing: <span class="accent">AI drafts, you own the message</span></h1>
+    <p class="sub">Managers write all day - updates, announcements, the message nobody wants to send, the exec summary due in an hour. AI is a superb first-draft engine for every one of them. But the tone, the empathy, and the relationship are yours, and a message that sounds AI-written quietly erodes trust. Tonight you draft a tough message and an exec update with AI, then make both unmistakably human.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · Own the message</span>
+      <span class="a3" style="flex:5">17-38 · Build-along: tough message + exec update</span>
+      <span class="a4" style="flex:1">38-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where AI helps a manager write</h2>
+    </div>
+    <p class="lede">A blank page is where good messages go to die - so you rush, and rushed messages read cold. AI kills the blank page: it structures the hard message, compresses the pile into an update, and hands you a draft in seconds. Your job starts there. You bring the tone, the empathy, the one true detail, and the voice your team already trusts. This session is two rounds of exactly that - a tough message and an exec update - draft with AI, then own it.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A drafted tough message - bad news, a boundary, or a redirect - rewritten in your own voice with the empathy intact, plus a crisp exec update built from a messy pile using the what / so-what / ask shape. Two reusable prompts you will run every week.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: OWN THE MESSAGE ============ -->
+  <section class="section" id="own-the-message">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers management practice - written communication</span>
+      <h2>AI drafts, you own the message <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Think of AI as the fastest first-draft engine you have ever had - and nothing more. It gets words on the page for updates, announcements, hard messages, and summaries. But a message is a relationship act, not a text-generation task. The tone, the empathy, and the trust are carried by you, and if the words sound like a machine wrote them, the reader feels it and trusts you a little less.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A message pipeline: your intent and context feed an AI first draft, then your edit for tone and empathy, then send in your voice - you own tone and empathy">
+        <defs>
+          <marker id="b3xAh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#C3D2CB"/>
+          </marker>
+        </defs>
+        <style>
+          .b3xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b3xI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b3xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b3xXi { font: 400 12.5px Inter, sans-serif; fill: #4A3A0C; }
+          .b3xN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <rect x="20" y="70" width="180" height="100" rx="12" fill="#1B5E4B"/>
+        <text class="b3xT" x="40" y="108">Intent + context</text>
+        <text class="b3xX" x="40" y="130">what you want to</text>
+        <text class="b3xX" x="40" y="148">say, who, why</text>
+        <line x1="205" y1="120" x2="238" y2="120" stroke="#C3D2CB" stroke-width="2" marker-end="url(#b3xAh)"/>
+        <rect x="245" y="70" width="180" height="100" rx="12" fill="#3E8E72"/>
+        <text class="b3xT" x="265" y="108">AI first draft</text>
+        <text class="b3xX" x="265" y="130">structure + clarity,</text>
+        <text class="b3xX" x="265" y="148">drafted fast</text>
+        <line x1="430" y1="120" x2="463" y2="120" stroke="#C3D2CB" stroke-width="2" marker-end="url(#b3xAh)"/>
+        <rect x="470" y="70" width="180" height="100" rx="12" fill="#A7D4C4"/>
+        <text class="b3xI" x="490" y="108">Your edit</text>
+        <text class="b3xXi" x="490" y="130">tone + empathy</text>
+        <text class="b3xXi" x="490" y="148">pass - your voice</text>
+        <line x1="655" y1="120" x2="688" y2="120" stroke="#C3D2CB" stroke-width="2" marker-end="url(#b3xAh)"/>
+        <rect x="695" y="70" width="165" height="100" rx="12" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b3xI" x="715" y="108">Send</text>
+        <text class="b3xXi" x="715" y="130">sounds like you,</text>
+        <text class="b3xXi" x="715" y="148">not the machine</text>
+        <rect x="20" y="250" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b3xN" x="44" y="262">AI drafts the words fast; you own the tone, the empathy, and the relationship.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the message pipeline: AI drafts, your edit for tone and empathy is where you own it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Draft fast, then make it unmistakably yours<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The value of AI here is speed to a first draft, not the final words. The draft gets you past the blank page and gives you a clear structure to react to. Then you do the part only you can do: fit it to this reader, this moment, and your own voice. Ship the AI draft raw and people can tell - it is generic, a touch too polished, and strangely warm about nothing.</p>
+        <ul>
+          <li><strong>Use it to start, not to finish.</strong> A first draft in ten seconds beats a perfect blank page in ten minutes.</li>
+          <li><strong>Do a voice pass, always.</strong> Read it aloud. Cut the words you would never say. Add the one specific detail only you know.</li>
+          <li><strong>Sounding AI-written costs trust.</strong> Generic praise, hedge words, and tidy symmetry read as "did not actually think about me". That is the opposite of leadership.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI) - the voice pass</span>Here is a draft message [paste it]. Rewrite it in a warmer, more direct human voice: shorter sentences, no corporate filler, no generic praise. Keep it honest. Flag any line that sounds AI-written so I can cut it.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The apology that read like a press release.</strong> A manager missed a commitment to their team, asked a chatbot for an apology note, and sent it almost unchanged. It was grammatically perfect and completely hollow - three sentences of polished nothing. One report replied "did you write this?" The fix took ninety seconds: name the specific miss, say sorry plainly, say what changes. AI can draft an apology; only you can mean it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The tells of an AI-written message<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Learn the tells so you can strip them out before you hit send.</p>
+        <ul>
+          <li><strong>Generic warmth.</strong> "I truly appreciate your incredible hard work" about nothing in particular. Real warmth names a real thing.</li>
+          <li><strong>Tidy symmetry.</strong> Everything in threes, every paragraph the same length. People do not write that evenly.</li>
+          <li><strong>Hedge soup.</strong> "It is important to note that we may want to consider" - three qualifiers before a simple point.</li>
+          <li><strong>No specifics.</strong> Nothing only you would know: no name of the thing, the date, the actual number, the real reason.</li>
+        </ul>
+        <p>The fix for all four is the same - one concrete detail and your own plain voice. That is the 30% AI cannot supply.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: HARD MESSAGES ============ -->
+  <section class="section" id="hard-messages">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers management practice - difficult conversations</span>
+      <h2>Hard messages, done human <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The messages you dread - bad news, a boundary, a redirect - are exactly where AI helps most and where it must never be the voice. Use it for the scaffolding: clarity on the core point, a sane structure, and a heads-up on how the reader might react. Then rewrite it as you, out loud, warm and direct. And before you paste a word, anonymize any people-data - no names, no identifiable details, ever in a consumer tool.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Structure the hard part, carry the humanity yourself<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A hard message fails in one of two ways: it buries the point so the reader is confused, or it lands the point so coldly the reader is hurt. AI is good at fixing the first - clear structure, the point up front, the likely objections anticipated. Only you can fix the second, because empathy is not a template. Split the work exactly that way.</p>
+        <ul>
+          <li><strong>Let AI structure.</strong> "What is the core message, what order, what will they push back on" - that scaffolding is safe to outsource.</li>
+          <li><strong>You carry the empathy.</strong> The acknowledgement, the tone, the door left open - that is the relationship, and it is yours.</li>
+          <li><strong>Anonymize first.</strong> Describe the situation as "a team member who..." with names and identifying details stripped. Rail two, every time.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Structure with AI, deliver as a human</strong>
+          Ask AI to organize the message and flag reactions. Then close the chat and write the real thing in your voice. The reader can always tell which paragraph you actually meant.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Message type - what AI helps with vs what you own<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Message type</th><th>AI helps with</th><th>You own</th></tr></thead>
+          <tbody>
+            <tr><td>Bad news (a decision, a miss)</td><td>Lead with the point, anticipate questions, a clear structure</td><td>The honesty, the acknowledgement, no false comfort</td></tr>
+            <tr><td>Setting a boundary</td><td>Firm-but-kind phrasing, staying on the ask</td><td>Meaning it, and holding it after you send</td></tr>
+            <tr><td>A redirect / correction</td><td>Separate the behavior from the person, keep it specific</td><td>The care that says "I am on your side"</td></tr>
+            <tr><td>An announcement</td><td>Clarity, the what and the why, a tidy first draft</td><td>The energy and the read of how your team will hear it</td></tr>
+            <tr><td>Recognition</td><td>A structure so it does not ramble</td><td>The one specific thing they actually did</td></tr>
+          </tbody>
+        </table>
+        <p>Same pattern down every row: AI does the structure, you carry the human part. Never put a real name or performance detail in the left-hand prompt.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: EXEC UPDATES ============ -->
+  <section class="section" id="exec-updates">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers management practice - executive communication</span>
+      <h2>Exec updates + concision <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Your leadership does not have time for the pile - the thread, the doc, the five status notes. They need the compressed version: what happened, so what, what you need. AI is excellent at compression, which is a skill most managers find hard. Feed it the mess, get a crisp draft, then do the two things AI cannot - verify every fact, and own the framing so the "so-what" is the one you actually believe.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What / so-what / ask - and verify the facts<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A good exec update answers three questions fast: what is the situation, why does it matter, and what do you need from me. AI can shape a pile into that structure in seconds. But compression is where errors hide - a summary can drop a caveat or overstate a number and sound perfectly confident doing it. So you verify before you send, and you own the framing.</p>
+        <ul>
+          <li><strong>Situation - what happened, in one or two lines.</strong> No backstory the exec does not need.</li>
+          <li><strong>Impact - the so-what.</strong> Why it matters, to what, by how much. This is the line they actually read.</li>
+          <li><strong>Ask - what you need.</strong> A decision, a resource, an escalation, or "no action, FYI". Be explicit.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Verify, then frame</strong>
+          Check every number and claim against the source - AI will compress a maybe into a fact. Then set the framing yourself: the "so-what" is a judgment call, and it is yours to own.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Draft a tough message, then make it human <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take a real message you are dreading and split the work: AI structures it and warns you about reactions, then you do an empathy and voice pass so it sounds like you and not a policy memo. Anonymize before you type a single name.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick a real hard message you owe someone - a decision they will not love, a boundary, a redirect. Strip all names and identifying details (rail two).</p></div>
+      <div class="step"><p><strong>Structure pass:</strong> ask AI for the core message, the best order, and the two or three reactions to anticipate. Do not ask it to write the final note yet.</p></div>
+      <div class="step"><p><strong>Draft pass:</strong> have it write a first version - clear, direct, kind. Read it. Notice what is useful and what sounds like a machine.</p></div>
+      <div class="step"><p><strong>Empathy + voice pass:</strong> rewrite it yourself. Add the one real acknowledgement, cut the generic warmth, say it the way you would actually say it aloud.</p></div>
+      <div class="step"><p>Read the final version out loud. If it sounds like you talking to a person you respect, it is ready. That last pass is the whole job.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">Prompt A - skip the structure, ship it raw (do not)</span>Write a message telling a team member their project is being cancelled. Make it nice.</div>
+
+    <div class="prompt-box good"><span class="label">★ Prompt B - structure first, then you finish it</span>I need to deliver a hard message to a team member (details anonymized): [situation, no
+names]. Do NOT write the final note.
+First give me: (1) the single core message they must not miss; (2) the best order to say
+it; (3) the two or three reactions I should anticipate and how to acknowledge each.
+Then draft one clear, kind, direct version I can react to - short sentences, no corporate
+filler, no generic praise. I will do the empathy and voice pass myself.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The redirect that kept a good person.</strong> A team lead had to tell a strong performer their pet project was being shelved. The AI structure pass surfaced the reaction they had not braced for - not anger, but feeling their judgment was doubted. That one insight reshaped the whole message: it opened by naming the good call behind the project, then explained the shift. The person stayed, and stayed engaged. AI spotted the reaction; the manager carried the care.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Messy bullets into a crisp exec update <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Turn a pile of status notes into a three-line update your leadership can read in fifteen seconds - situation, impact, ask - then verify every fact before it goes out.</p>
+
+    <div class="steps">
+      <div class="step"><p>Gather your raw material: the messy bullets, the thread, the half-written status. Remove anything that names a specific person if it is sensitive.</p></div>
+      <div class="step"><p>Ask AI to compress it into situation / impact / ask - crisp, exec-ready, no jargon, and to flag anything it was unsure about.</p></div>
+      <div class="step"><p><strong>Verify pass:</strong> check every number, date, and claim against the source. Fix anything the compression overstated or dropped.</p></div>
+      <div class="step"><p><strong>Framing pass:</strong> rewrite the "so-what" as the point you actually believe, and make the ask unmistakable - a decision, a resource, or "FYI, no action".</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The exec-update prompt</span>Turn these raw notes into a crisp executive update [paste bullets].
+Format it as exactly three parts:
+1) Situation - what happened, one or two lines.
+2) Impact - the so-what: why it matters, to what, by how much.
+3) Ask - the one thing I need (a decision, a resource, an escalation, or "FYI, no action").
+Plain language, no jargon. Flag any number or claim you are unsure about so I can verify it.</div>
+
+    <div class="callout tip">
+      <strong>Own the so-what</strong>
+      AI can arrange the facts, but "why this matters" is a judgment call. Read the impact line and ask: is that the point I would stake my name on? If not, rewrite it. That line is yours.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish both demos if you did not complete them live - especially the empathy and voice pass on the tough message. That pass is the lesson.</li>
+      <li>Take one real message you owe this week, draft it with the structure-first prompt, then rewrite it in your own voice before sending.</li>
+      <li>Convert one messy status pile into a situation / impact / ask update - and catch at least one fact you needed to verify.</li>
+      <li>Run the voice pass on something you have already written. Count the AI-tells you can cut even from your own drafts.</li>
+      <li>Optional: keep both prompts somewhere handy. You will reuse them every single week.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the management practice canon on written communication - updates, difficult conversations, and executive communication. Certificates and exec-ed programs stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Management practice - written communication</span><span class="note">Part 1 · AI drafts, you own tone and empathy</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Management practice - difficult conversations</span><span class="note">Part 2 · structure with AI, deliver as a human</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Management practice - executive communication</span><span class="note">Part 3 · what / so-what / ask, concision</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">People-data rail (GDPR/PDPA) canon</span><span class="note">Parts 2-3 · anonymize before you draft</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why do you always do a voice pass on an AI-drafted message?</p>
+      <button class="qopt" type="button">A · To make it longer and more formal</button>
+      <button class="qopt" type="button">B · Because a message is a relationship act - tone, empathy, and trust are yours, and an AI-sounding message erodes trust</button>
+      <button class="qopt" type="button">C · Because AI cannot use correct grammar</button>
+      <p class="qwhy">AI gets you a fast first draft, but the reader trusts you, not the tool. Generic warmth and no specifics read as "did not think about me". The voice pass is where you own the message.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · How should you use AI on a hard message about a specific team member?</p>
+      <button class="qopt" type="button">A · Paste their name and full history, and let AI write and send it</button>
+      <button class="qopt" type="button">B · Avoid AI entirely - it can never help with people topics</button>
+      <button class="qopt" type="button">C · Anonymize first, use AI to structure and anticipate reactions, then write the real thing in your voice</button>
+      <p class="qwhy">Split the work: AI does the scaffolding on an anonymized description, you carry the empathy and deliver it as yourself. Never put a real name or people-data in a consumer tool.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What is the discipline for an AI-compressed exec update?</p>
+      <button class="qopt" type="button">A · Verify every fact yourself and own the framing - AI can overstate a claim while sounding confident</button>
+      <button class="qopt" type="button">B · Trust the summary as written since AI is precise</button>
+      <button class="qopt" type="button">C · Make it as long as possible so nothing is missed</button>
+      <p class="qwhy">Compression is where errors hide - a caveat drops, a number inflates, and it all sounds sure. You verify against the source and own the "so-what", because why-it-matters is a judgment call.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>AI drafts, you own it</b><span>the fastest first-draft engine you have; the tone, empathy, and relationship stay yours.</span></div>
+      <div class="cheat-item"><b>Always do a voice pass</b><span>read it aloud, cut words you would never say, add one real detail only you know.</span></div>
+      <div class="cheat-item"><b>AI-written tells</b><span>generic warmth, tidy symmetry, hedge soup, no specifics. Strip them before you send.</span></div>
+      <div class="cheat-item"><b>Hard messages</b><span>AI structures + anticipates reactions; you carry the empathy and deliver it as a human.</span></div>
+      <div class="cheat-item"><b>Anonymize first</b><span>describe as "a team member who..." - no names or people-data in a consumer tool.</span></div>
+      <div class="cheat-item"><b>Exec update shape</b><span>situation / impact / ask. The "so-what" is the line they read - make it true.</span></div>
+      <div class="cheat-item"><b>Verify, then frame</b><span>compression hides errors; check every number, then own the framing yourself.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b4 - planning &amp; prioritization: goals to OKRs, synthesize inputs, own the tradeoffs.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 3 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-ai-assisted-decisions.html">← Previous: AI-assisted decisions</a> &nbsp;·&nbsp; <a href="b4-planning-prioritization.html">Next: Planning &amp; prioritization →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

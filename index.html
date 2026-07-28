@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn AI + leadership with phoebe - a two-track course for leaders in the AI age</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(27,94,75,.15); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#E4F0EB); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .rail { margin-top: 1.4rem; border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: var(--amber-50); padding: 1rem 1.2rem; font-size: .9rem; }
+  .rail b { color: var(--amber-ink); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe</div>
+    <h1>Two tracks for leaders in the <span class="accent">AI age</span></h1>
+    <p class="sub">A leader track that teaches senior leaders to steer strategy, culture, and ethics as AI reshapes the organization - and a manager track that puts AI to work in the daily craft of leading people: sharper decisions, clearer communication, better planning and feedback. Around 75% of companies now prioritize AI training for their leaders. The winners will not be the ones who use AI the most, but the ones whose judgment it makes sharper.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+      <div class="stat"><b data-count="75">75</b><span>% of firms now train leaders on AI</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for senior leaders &amp; executives · 6 x 45 min · no code, ever</span></h2>
+      <p class="plede">Thinking mode: what changes for leaders, how AI sharpens decisions, how to build an AI-ready culture, lead the change, and keep it ethical - each session ends with the questions to ask your team.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-leading-ai-age.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>Leading in the AI age</h3>
+        <p>What actually changes for leaders, the new mandate, and the map of where AI belongs versus where you do.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-ai-augmented-decision.html" style="--diff:#34D399">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>The AI-augmented decision</h3>
+        <p>Where AI sharpens a decision and where judgment must stay human - and how to tell the two apart every time.</p>
+        <span class="meta"><span class="pill light">Decision exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-ai-ready-culture.html" style="--diff:#FBBF24">
+        <span class="cicon">🌱</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Building an AI-ready culture</h3>
+        <p>Trust, psychological safety, and permission to experiment - turning quiet fear into shared curiosity.</p>
+        <span class="meta"><span class="pill light">Culture exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-ethics-responsible-ai.html" style="--diff:#FBBF24">
+        <span class="cicon">🛡️</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Ethics, risk &amp; responsible AI leadership</h3>
+        <p>Accountability, bias, and transparency - the guardrails a leader owns before the technology sets them.</p>
+        <span class="meta"><span class="pill light">Governance checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-leading-change-adoption.html" style="--diff:#FB923C">
+        <span class="cicon">🔄</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Leading change &amp; adoption</h3>
+        <p>Resistance, the adoption curve, reskilling, and measuring real ROI - moving a team from pilots to habit.</p>
+        <span class="meta"><span class="pill light">Adoption plan</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-strategy-future.html" style="--diff:#FB923C">
+        <span class="cicon">🔭</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Strategy &amp; the AI-era future</h3>
+        <p>Agentic organizations, the 24-month roadmap, and the leadership narrative that rallies people around it.</p>
+        <span class="meta"><span class="pill light">Roadmap exercise</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The manager track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for people-managers · 10 x 45 min · ChatGPT / Claude, no code</span></h2>
+      <p class="plede">Hands on the daily craft of management: use AI to make sharper decisions, write hard messages, plan and prioritize, give better feedback, run tighter meetings, and enable your team - with your judgment always owning the call.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-ai-foundations-managers.html" style="--diff:#34D399">
+        <span class="cicon">🤖</span>
+        <span class="cnum">Manager 1 · easy</span>
+        <h3>AI foundations for managers</h3>
+        <p>What AI does well and badly for a manager, the tool landscape, and the two rails that keep you leading.</p>
+        <span class="meta"><span class="pill amber">▶ Managers start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-ai-assisted-decisions.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Manager 2 · medium</span>
+        <h3>AI-assisted decisions</h3>
+        <p>Frame it, widen the options, stress-test for bias - with a live simulator that shows decision quality climb.</p>
+        <span class="meta"><span class="pill light">★ interactive: leadership-live</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-communication-writing.html" style="--diff:#FBBF24">
+        <span class="cicon">✍️</span>
+        <span class="cnum">Manager 3 · medium</span>
+        <h3>Communication &amp; writing</h3>
+        <p>Draft the update, the tough message, the exec summary - fast first drafts, your voice and judgment on top.</p>
+        <span class="meta"><span class="pill light">Message drafts</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-planning-prioritization.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Manager 4 · medium</span>
+        <h3>Planning &amp; prioritization</h3>
+        <p>Goals and OKRs, roadmaps, and synthesizing a pile of inputs into a clear plan the team can act on.</p>
+        <span class="meta"><span class="pill light">Plan draft</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-feedback-performance.html" style="--diff:#FB923C">
+        <span class="cicon">💬</span>
+        <span class="cnum">Manager 5 · hands-on</span>
+        <h3>Feedback &amp; performance</h3>
+        <p>Structure feedback and reviews with AI - and the fairness and bias cautions that keep people decisions human.</p>
+        <span class="meta"><span class="pill light">Feedback drafts</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-delegation.html" style="--diff:#FBBF24">
+        <span class="cicon">🎚️</span>
+        <span class="cnum">Manager 6 · medium</span>
+        <h3>Delegation: automate, augment, keep</h3>
+        <p>Sort your team's work into what AI automates, what it augments, and what stays human - and design the workflow.</p>
+        <span class="meta"><span class="pill light">Delegation map</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-meetings-synthesis.html" style="--diff:#34D399">
+        <span class="cicon">📝</span>
+        <span class="cnum">Manager 7 · easy</span>
+        <h3>Meetings &amp; synthesis</h3>
+        <p>Turn meetings into notes, decisions, and actions - and prep and facilitate so the time is actually worth it.</p>
+        <span class="meta"><span class="pill light">Meeting kit</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-team-enablement.html" style="--diff:#FB923C">
+        <span class="cicon">🚀</span>
+        <span class="cnum">Manager 8 · hands-on</span>
+        <h3>Team enablement &amp; upskilling</h3>
+        <p>Coach your team to use AI well - shared prompt libraries, guardrails, and quick wins that build real capability.</p>
+        <span class="meta"><span class="pill light">Enablement plan</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-risk-ethics-practice.html" style="--diff:#FB923C">
+        <span class="cicon">🔒</span>
+        <span class="cnum">Manager 9 · hands-on</span>
+        <h3>Risk &amp; ethics in practice</h3>
+        <p>People-data privacy, bias in hiring and performance, and disclosure - the manager's line you never cross.</p>
+        <span class="meta"><span class="pill light">Risk checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-leading-augmented-teams.html" style="--diff:#F87171">
+        <span class="cicon">🏛️</span>
+        <span class="cnum">Manager 10 · hardest</span>
+        <h3>Leading AI-augmented teams</h3>
+        <p>The operating model, the review cadence, and how to measure whether AI is actually making the team better.</p>
+        <span class="meta"><span class="pill light">Manager's playbook</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="rail">
+      <b>The one rule this whole course runs on:</b> AI advises, the leader decides and owns it. The judgment call, the accountability, and the human impact never transfer to the model - and the reading of people, the values, and the hard conversation stay yours. Never put employee data into a consumer AI tool.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Senior leaders steer the org; people-managers get the daily toolkit - and both keep judgment human.</p>
+      <div class="path"><b>🤝 Leader (no code, ever)</b>
+        <a class="pstep" href="courses/a1-leading-ai-age.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-ai-augmented-decision.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-ai-ready-culture.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-ethics-responsible-ai.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-leading-change-adoption.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-strategy-future.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Manager (daily toolkit)</b>
+        <a class="pstep" href="courses/b1-ai-foundations-managers.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-ai-assisted-decisions.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-communication-writing.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-planning-prioritization.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-feedback-performance.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-delegation.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-meetings-synthesis.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-team-enablement.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-risk-ethics-practice.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-leading-augmented-teams.html">b10</a>
+      </div>
+      <div class="path"><b>🌱 Curious follower (a taste)</b>
+        <a class="pstep" href="courses/a1-leading-ai-age.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-ai-augmented-decision.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-ai-foundations-managers.html">b1</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND manage)</b>
+        <a class="pstep" href="courses/a1-leading-ai-age.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-ai-foundations-managers.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · sources: MIT Sloan · Stanford GSB · Wharton exec-ed · AI leadership + change-management programs + responsible-AI canon</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "AI +\nLeadership",
+  centerColor: "#14332B",
+  sessions: [
+    { label: "Leading the\nAI age", href: "courses/a1-leading-ai-age.html", color: "#34D399",
+      concepts: [
+        { label: "What changes", href: "courses/a1-leading-ai-age.html" },
+        { label: "The mandate", href: "courses/a1-leading-ai-age.html" } ] },
+    { label: "AI-augmented\ndecision", href: "courses/a2-ai-augmented-decision.html", color: "#34D399",
+      concepts: [
+        { label: "Sharpen vs human", href: "courses/a2-ai-augmented-decision.html" },
+        { label: "Decision quality", href: "courses/a2-ai-augmented-decision.html" } ] },
+    { label: "AI-ready\nculture", href: "courses/a3-ai-ready-culture.html", color: "#FBBF24",
+      concepts: [
+        { label: "Trust + safety", href: "courses/a3-ai-ready-culture.html" },
+        { label: "Fear to curiosity", href: "courses/a3-ai-ready-culture.html" } ] },
+    { label: "Ethics +\nresponsible AI", href: "courses/a4-ethics-responsible-ai.html", color: "#FBBF24",
+      concepts: [
+        { label: "Accountability", href: "courses/a4-ethics-responsible-ai.html" },
+        { label: "Bias + transparency", href: "courses/a4-ethics-responsible-ai.html" } ] },
+    { label: "Change +\nadoption", href: "courses/a5-leading-change-adoption.html", color: "#FB923C",
+      concepts: [
+        { label: "Resistance", href: "courses/a5-leading-change-adoption.html" },
+        { label: "ROI + reskill", href: "courses/a5-leading-change-adoption.html" } ] },
+    { label: "Strategy +\nfuture", href: "courses/a6-strategy-future.html", color: "#FB923C",
+      concepts: [
+        { label: "Agentic orgs", href: "courses/a6-strategy-future.html" },
+        { label: "Leadership narrative", href: "courses/a6-strategy-future.html" } ] },
+    { label: "AI\nfoundations", href: "courses/b1-ai-foundations-managers.html", color: "#34D399",
+      concepts: [
+        { label: "Can vs can't", href: "courses/b1-ai-foundations-managers.html" },
+        { label: "Tool landscape", href: "courses/b1-ai-foundations-managers.html" },
+        { label: "The two rails", href: "courses/b1-ai-foundations-managers.html" } ] },
+    { label: "AI-assisted\ndecisions", href: "courses/b2-ai-assisted-decisions.html", color: "#FBBF24",
+      concepts: [
+        { label: "Framing", href: "courses/b2-ai-assisted-decisions.html" },
+        { label: "Options", href: "courses/b2-ai-assisted-decisions.html" },
+        { label: "Bias check", href: "courses/b2-ai-assisted-decisions.html" } ] },
+    { label: "Communication\n& writing", href: "courses/b3-communication-writing.html", color: "#FBBF24",
+      concepts: [
+        { label: "Tough messages", href: "courses/b3-communication-writing.html" },
+        { label: "Exec updates", href: "courses/b3-communication-writing.html" } ] },
+    { label: "Planning +\nprioritization", href: "courses/b4-planning-prioritization.html", color: "#FBBF24",
+      concepts: [
+        { label: "OKRs", href: "courses/b4-planning-prioritization.html" },
+        { label: "Synthesis", href: "courses/b4-planning-prioritization.html" } ] },
+    { label: "Feedback +\nperformance", href: "courses/b5-feedback-performance.html", color: "#FB923C",
+      concepts: [
+        { label: "Reviews", href: "courses/b5-feedback-performance.html" },
+        { label: "Fairness caution", href: "courses/b5-feedback-performance.html" } ] },
+    { label: "Delegation", href: "courses/b6-delegation.html", color: "#FBBF24",
+      concepts: [
+        { label: "Automate/augment", href: "courses/b6-delegation.html" },
+        { label: "Keep human", href: "courses/b6-delegation.html" } ] },
+    { label: "Meetings +\nsynthesis", href: "courses/b7-meetings-synthesis.html", color: "#34D399",
+      concepts: [
+        { label: "Notes + actions", href: "courses/b7-meetings-synthesis.html" },
+        { label: "Facilitation", href: "courses/b7-meetings-synthesis.html" } ] },
+    { label: "Team\nenablement", href: "courses/b8-team-enablement.html", color: "#FB923C",
+      concepts: [
+        { label: "Coach the team", href: "courses/b8-team-enablement.html" },
+        { label: "Prompt libraries", href: "courses/b8-team-enablement.html" } ] },
+    { label: "Risk + ethics\nin practice", href: "courses/b9-risk-ethics-practice.html", color: "#FB923C",
+      concepts: [
+        { label: "People-data", href: "courses/b9-risk-ethics-practice.html" },
+        { label: "Bias in decisions", href: "courses/b9-risk-ethics-practice.html" } ] },
+    { label: "Leading\naugmented teams", href: "courses/b10-leading-augmented-teams.html", color: "#F87171",
+      concepts: [
+        { label: "Operating model", href: "courses/b10-leading-augmented-teams.html" },
+        { label: "Measure impact", href: "courses/b10-leading-augmented-teams.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

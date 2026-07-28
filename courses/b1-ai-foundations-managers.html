@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 1 · AI foundations for managers - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 1 of 10</div>
+    <h1>AI foundations for managers: <span class="accent">a sharper advisor, not a boss</span></h1>
+    <p class="sub">Before you point AI at a single management task, one honest hour: what AI is genuinely great at for a manager, the one thing it does that quietly erodes leadership - it agrees with you and lets you stop thinking - and the two rails that keep the judgment yours. By the end you can use AI to sharpen decisions without ever handing it the call.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude · no code</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What AI does for a manager</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: rubber-stamp vs advisor</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten sessions, all hands-on, all on the daily craft of managing people: decisions, communication, planning, feedback, delegation, meetings, and enabling your team. Tonight you learn what the tool is; then b2 sharpens decisions with a live simulator, and b3-b10 give you AI-assisted moves for every part of the job. No code, ever. Two rails run through all ten, starting now, and they both point the same way: AI advises, you decide.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clear model of what AI can and cannot be trusted to do in leadership, the manager-specific trap (AI is agreeable, so it will not push back like a good advisor), a two-rail habit you will use every session, and your team's own one-page AI ground rules for managers.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT AI IS FOR A MANAGER ============ -->
+  <section class="section" id="what-ai-is">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers MIT Sloan / Wharton AI-leadership foundations</span>
+      <h2>What AI actually is - for a manager <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A large language model predicts the most likely next words. For a manager that makes it a superb thinking partner - it drafts, structures, synthesizes, and widens your options in seconds - and a dangerous one, because it is confident, agreeable, and blind to the people in front of you. It will help you think; it must never think for you.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What to trust AI with as a manager: strong at drafting, structuring, synthesizing, and widening options; risky at judgment, reading people, and facts - those stay human">
+        <style>
+          .b1cT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b1cI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b1cX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b1cXi { font: 400 12.5px Inter, sans-serif; fill: #4A3A0C; }
+          .b1cN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <rect x="30" y="46" width="195" height="96" rx="12" fill="#1B5E4B"/>
+        <text class="b1cT" x="52" y="84">Draft &amp; structure</text>
+        <text class="b1cX" x="52" y="106">messages, plans, memos -</text>
+        <text class="b1cX" x="52" y="124">trust, then own</text>
+        <rect x="240" y="46" width="195" height="96" rx="12" fill="#3E8E72"/>
+        <text class="b1cT" x="262" y="84">Synthesize inputs</text>
+        <text class="b1cX" x="262" y="106">boil a pile down to</text>
+        <text class="b1cX" x="262" y="124">themes + options</text>
+        <rect x="450" y="46" width="195" height="96" rx="12" fill="#A7D4C4"/>
+        <text class="b1cI" x="472" y="84">Widen the options</text>
+        <text class="b1cXi" x="472" y="106">a third path beyond</text>
+        <text class="b1cXi" x="472" y="124">your first two</text>
+        <rect x="660" y="46" width="195" height="96" rx="12" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b1cI" x="682" y="84">Judgment ✗</text>
+        <text class="b1cXi" x="682" y="106">reading people, values,</text>
+        <text class="b1cXi" x="682" y="124">the call - stay human</text>
+        <rect x="30" y="250" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b1cN" x="54" y="262">Use AI to think wider and faster; the decision, the people, and the ownership stay yours.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the leadership reliability map: three you can trust, one that stays human</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The agreeableness trap - why AI is a bad yes-man<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A good advisor tells you when you are wrong. AI, tuned to be helpful and agreeable, tends to tell you that you are right - it will rationalize the decision you clearly already want. For a manager that is uniquely dangerous, because the whole value of counsel is friction, and AI removes it. The fix is to make it argue against you on purpose.</p>
+        <ul>
+          <li><strong>It agrees by default.</strong> Ask "is this a good idea?" and you will usually hear yes. Confidence is not endorsement.</li>
+          <li><strong>Over-reliance erodes judgment.</strong> The more you let it decide, the less your own judgment gets exercised - a muscle that atrophies.</li>
+          <li><strong>The fix is adversarial prompting.</strong> "Argue the other side", "give me the strongest case against this", "what am I missing" - make AI the challenger, not the cheerleader.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI) - feel it flip</span>Here is a decision I am leaning toward: [describe it]. First tell me why it is a good idea. Now give me the three strongest arguments AGAINST it, and what would have to be true for me to be wrong.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The reorg the AI cheered all the way to failure.</strong> A manager talked through a reorg with a chatbot; it agreed at every turn, polished the rationale, and drafted the announcement. Nobody in the loop played skeptic. The plan shipped and stalled on the exact objection a challenger would have raised. AI did not make the call - but by only agreeing, it helped a bad one feel certain.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The can / cannot table - pin this to your monitor<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Trust it to...</th><th>Never trust it to (keep human)</th></tr></thead>
+          <tbody>
+            <tr><td>Draft messages, plans, and updates from your input</td><td>Make the judgment call or own the outcome</td></tr>
+            <tr><td>Synthesize inputs and surface themes</td><td>Read the room or a person's real state</td></tr>
+            <tr><td>Widen options and run a pre-mortem</td><td>Decide anything about a specific person</td></tr>
+            <tr><td>Structure a decision or a hard conversation</td><td>Produce facts, metrics, or HR data from memory</td></tr>
+            <tr><td>Play devil's advocate on demand</td><td>Carry the values or the empathy</td></tr>
+          </tbody>
+        </table>
+        <p>The left column is a build-along later in this track. The right column is why every session keeps you, the human, holding the decision and the people.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE TOOL LANDSCAPE ============ -->
+  <section class="section" id="tool-landscape">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the 2026 manager AI-tool surveys</span>
+      <h2>The manager AI tool landscape, 2026 <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The right first question is not "which tool" but "is this safe for the people-data I am about to put in it?" Three layers, and the line between them is about confidentiality and the people you lead, not raw quality.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three layers of manager AI tools: general assistants, in-suite copilots and notetakers, and enterprise tools - separated by a people-data line">
+        <style>
+          .b1sT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b1sI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b1sX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b1sXi { font: 400 12.5px Inter, sans-serif; fill: #5C6B64; }
+          .b1sN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <rect x="30" y="40" width="540" height="58" rx="12" fill="#A7D4C4"/>
+        <text class="b1sI" x="54" y="66">In-suite copilots + notetakers</text>
+        <text class="b1sI" x="54" y="86" font-weight="400" font-size="12.5">Copilot in M365/Teams · meeting notetakers</text>
+        <rect x="30" y="120" width="540" height="58" rx="12" fill="#1B5E4B"/>
+        <text class="b1sT" x="54" y="146">General assistants</text>
+        <text class="b1sX" x="54" y="166">ChatGPT · Claude · Gemini - decisions, drafting, synthesis, devil's advocate</text>
+        <rect x="30" y="200" width="540" height="58" rx="12" fill="#14332B"/>
+        <text class="b1sT" x="54" y="226">Enterprise + HR-approved</text>
+        <text class="b1sX" x="54" y="246">enterprise tiers with data controls - the only place real people-data goes</text>
+        <rect x="610" y="120" width="240" height="138" rx="12" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b1sI" x="632" y="148">The people-data line</text>
+        <text class="b1sXi" x="632" y="172">Employee names, perf,</text>
+        <text class="b1sXi" x="632" y="190">HR data -&gt; enterprise/</text>
+        <text class="b1sXi" x="632" y="208">approved tools only.</text>
+        <text class="b1sXi" x="632" y="232">Anonymized thinking -&gt;</text>
+        <text class="b1sXi" x="632" y="250">any assistant is fine.</text>
+        <rect x="30" y="284" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b1sN" x="54" y="296">Quality is similar across layers - what differs is whether your people's data is safe.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three tool layers, one people-data line that decides which is safe</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>General, in-suite, and the people-data line<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each layer has a job. Do the thinking anywhere; put the people-data only where it is safe.</p>
+        <ul>
+          <li><strong>General assistants</strong> (ChatGPT, Claude, Gemini) - your thinking partner for decisions, drafts, synthesis, and playing skeptic. Keep the input anonymized.</li>
+          <li><strong>In-suite copilots + notetakers</strong> - Copilot in M365/Teams, meeting notetakers; convenient, and governed by that tool's data terms. Know what they capture and where it goes.</li>
+          <li><strong>Enterprise + HR-approved</strong> - the only place real employee names, performance data, or HR information belongs. Anything about a specific person lives here.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>One-question test before you paste</strong>
+          "Is there a real person's data in this, and would they be fine seeing where it went?" People-data - enterprise or approved tools only. Anonymized thinking - any assistant. That single question is rail two.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The 2026 landscape at a glance<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Thinking + drafting:</strong> ChatGPT, Claude, Gemini for decisions, communication, planning, and synthesis.</li>
+          <li><strong>In the flow of work:</strong> Copilot across M365/Teams, meeting notetakers that draft summaries and actions (session b7).</li>
+          <li><strong>People + HR:</strong> only enterprise or HR-sanctioned tools touch employee data - the rest is off-limits for anything identifiable.</li>
+          <li><strong>The shift:</strong> around 75% of companies now prioritize AI training for their leaders - the expectation has moved from "if" to "lead it well".</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE TWO RAILS ============ -->
+  <section class="section" id="two-rails">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the habit every later session assumes</span>
+      <h2>The two rails: you decide, you protect your people <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Everything else in this course is technique. These two rails are non-negotiable, and they are what separate a leader who gets sharper with AI from one who quietly hands away the parts of the job that were the point.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 1 - AI advises, the leader decides and owns it<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI can structure a decision, widen the options, and argue both sides. The judgment call, the accountability, and the human impact are yours and do not transfer. "The AI recommended it" is not leadership, and it is not a defence to your team, your boss, or yourself.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Don't outsource the judgment or the empathy.</strong> The two things AI cannot do are the two things leadership is made of: weighing values when the data is silent, and being present in a hard conversation. Use AI to prepare for both - and then walk in as a human, because a person on the other side can always tell the difference.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 2 - protect your people's data<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Never put employee names, performance details, or sensitive HR information into a consumer AI tool, and stay alert to bias whenever AI touches a decision about a person - hiring, promotion, performance. Employment law and data-protection law (GDPR, PDPA) apply to your team's data exactly as they do to customers'.</p>
+        <ul>
+          <li><strong>Anonymize to think.</strong> You can use AI on a tricky people situation - strip the names and identifying details first.</li>
+          <li><strong>Watch for bias in people decisions.</strong> AI can launder a biased pattern into a confident recommendation. A human owns every call about a person, with fairness front of mind.</li>
+          <li><strong>Real data, safe tools only.</strong> Anything identifiable about an employee goes in enterprise or HR-approved tools, never a consumer chatbot.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI advises, I decide and own it, and I protect my people's data." That sentence is the spine of the whole manager track.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Rubber-stamp vs advisor - see the difference <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The single most important habit in the course, in one experiment. Ask AI to weigh in on a real decision two ways - as a yes-man, then as an advisor - and watch a confident rubber-stamp become genuine counsel.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick a real, low-stakes decision you are weighing. Strip out any names or people-data (rail two).</p></div>
+      <div class="step"><p><strong>Yes-man ask:</strong> "I am thinking of doing X - is that a good idea?" Note how quickly and agreeably it endorses you.</p></div>
+      <div class="step"><p><strong>Advisor ask:</strong> reframe the real decision, ask for three options with tradeoffs, the strongest case against your favorite, a pre-mortem, and whose perspective is missing.</p></div>
+      <div class="step"><p>Compare. The second reads like counsel from someone who is not afraid of you - options, risks, blind spots - instead of a mirror. That delta is the whole value of AI in a decision.</p></div>
+      <div class="step"><p>Now make the call yourself, out loud: what you decide and why. AI structured it; you own it. That is the move you will engineer on purpose in b2.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">Prompt A - yes-man (a confident rubber-stamp)</span>I am thinking of restructuring my team this way: [plan]. That is a good idea, right?</div>
+
+    <div class="prompt-box good"><span class="label">★ Prompt B - advisor (genuine counsel)</span>I am weighing how to solve [the real underlying problem]. One option is [plan].
+Act as a sharp, candid advisor who is not afraid to disagree with me.
+Give me: (1) three genuine options with tradeoffs, including doing nothing; (2) the
+strongest case against my current favorite; (3) a pre-mortem - if this fails in six
+months, why; (4) whose perspective I am missing. Do not tell me I am right by default.</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      Every later session is a variation on "make AI a candid advisor, then decide yourself". Decisions (b2), feedback (b5), and delegation (b6) are this same move. Learn it once tonight.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your team's AI ground rules for managers <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">A reusable artifact you will keep: a short "how managers here use AI" card. You draft it with AI, then edit it - which is rail one in miniature.</p>
+
+    <div class="steps">
+      <div class="step"><p>Give the AI the two rails and your context: your team, the tools you have (or have not) approved, and the people-data you handle.</p></div>
+      <div class="step"><p>Ask for a one-page card with three lists: <em>Green light</em> (safe uses - decisions, drafts, synthesis, devil's advocate on anonymized inputs), <em>Red light</em> (never: employee data in consumer tools, letting AI decide about a person), and <em>Always</em> (make it argue back, human owns the call, protect people-data).</p></div>
+      <div class="step"><p>Edit it hard. Add your real tools and the lines your org draws. The AI draft is 70%; your judgement is the 30% that matters.</p></div>
+      <div class="step"><p>Share it with your peer managers. You will refine it in the leader session a4 (ethics) and the manager finale b10.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The ground-rules prompt</span>Draft a one-page "AI ground rules for managers" card for our team.
+Context: managers here handle team performance and some HR data; approved tools are
+[list, or "none yet"].
+
+Build it around two rails:
+1) AI advises, the manager decides and owns it - judgment, accountability, and people
+   impact stay human; make AI argue back, do not let it rubber-stamp.
+2) Protect people-data: no employee names, performance, or HR data in consumer tools;
+   anonymize to think; watch for bias in people decisions.
+
+Format: three short lists - Green light, Red light, Always. Plain language, one page.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The card that kept managers confident and safe.</strong> A leadership team was split - some managers pasting team issues into free chatbots, others too scared to touch AI at all. A one-page card agreed in half an hour gave everyone a green light for the thinking and a hard line on people-data. Managers got sharper; nobody leaked a review.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish both demos if you did not complete them live - especially the yes-man vs advisor flip. Feeling AI agree with you is the lesson.</li>
+      <li>Run the advisor prompt on a real (anonymized) decision this week. Notice the option or risk you had not considered.</li>
+      <li>Finalise your one-page AI ground rules for managers and share it with a peer.</li>
+      <li>Confirm which tools you are cleared to use for anything touching your people. If the answer is "none yet", raise it - the leader session a4 helps.</li>
+      <li>Optional: catch yourself once this week about to ask AI "is this a good idea?" and reframe it as "argue me out of this".</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public AI-leadership curricula and management practice. Certificates and exec-ed programs stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">MIT Sloan / Wharton exec-ed - AI leadership foundations</span><span class="note">Part 1 · what AI does well and badly for leaders</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">2026 manager AI-tool surveys</span><span class="note">Part 2 · the tool landscape, people-data</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Responsible-AI leadership canon</span><span class="note">Part 3 · rail one; full depth in leader session a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">People-data + employment (GDPR/PDPA) canon</span><span class="note">Part 3 · rail two, sourced in the course map</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is the manager-specific trap with AI?</p>
+      <button class="qopt" type="button">A · It is too slow to be useful</button>
+      <button class="qopt" type="button">B · It is agreeable, so it rubber-stamps the decision you already want instead of challenging it</button>
+      <button class="qopt" type="button">C · It refuses to give opinions</button>
+      <p class="qwhy">AI is tuned to be helpful and agreeable, which removes the friction that makes counsel valuable. The fix is to make it argue against you on purpose.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · You want to think through a tricky situation with a specific team member. What do you do first?</p>
+      <button class="qopt" type="button">A · Paste their name and full performance history into a free chatbot</button>
+      <button class="qopt" type="button">B · Let the AI decide how to handle them</button>
+      <button class="qopt" type="button">C · Anonymize the details first, and keep the judgment call yours</button>
+      <p class="qwhy">Rail two: strip identifying people-data before using a consumer tool, and rail one: you own every decision about a person. AI helps you prepare, never decide.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What must always stay human in leadership?</p>
+      <button class="qopt" type="button">A · The judgment call, the values, the empathy, and the accountability</button>
+      <button class="qopt" type="button">B · Nothing - automate the whole role</button>
+      <button class="qopt" type="button">C · Only the paperwork</button>
+      <p class="qwhy">Rail one. AI structures and drafts; the reading of people, the values call, the hard conversation, and owning the outcome are what leadership is made of.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>AI for a manager</b><span>a thinking partner - drafts, structures, synthesizes, widens options. A sharper advisor, never the boss.</span></div>
+      <div class="cheat-item"><b>The agreeableness trap</b><span>AI agrees by default and rubber-stamps what you want. Confidence ≠ endorsement. Make it argue back.</span></div>
+      <div class="cheat-item"><b>Adversarial prompt</b><span>"argue the other side", "strongest case against", "what am I missing", "pre-mortem this".</span></div>
+      <div class="cheat-item"><b>Trust it to</b><span>draft, synthesize, widen options, run a pre-mortem, structure a hard conversation, play skeptic.</span></div>
+      <div class="cheat-item"><b>Keep human</b><span>the judgment call, reading people, values, empathy, facts/HR data, owning the outcome.</span></div>
+      <div class="cheat-item"><b>Rail 1 - you decide</b><span>AI advises, the leader decides and owns it. "The AI recommended it" is not leadership.</span></div>
+      <div class="cheat-item"><b>Rail 2 - protect people</b><span>no employee data in consumer tools; anonymize to think; watch for bias in people decisions.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b2 - AI-assisted decisions: frame, widen, stress-test, and drive the decision-quality simulator.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 1 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-ai-assisted-decisions.html">Next: AI-assisted decisions →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

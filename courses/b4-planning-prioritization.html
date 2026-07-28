@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 4 · Planning &amp; prioritization - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 4 of 10</div>
+    <h1>Planning &amp; prioritization: <span class="accent">AI drafts the plan, you own the tradeoffs</span></h1>
+    <p class="sub">A goal, a pile of inputs, and not enough time is the manager's default state. AI can turn a goal into OKRs, a roadmap, and a scored backlog, and boil a mess of survey answers and asks into clear themes - fast. But a plan is a set of tradeoff calls, and those are the strategy. Tonight you draft OKRs from a real goal and synthesize a pile into a prioritized shortlist, then make the cuts yourself.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · Goal to plan</span>
+      <span class="a3" style="flex:5">17-38 · Build-along: OKRs + prioritized shortlist</span>
+      <span class="a4" style="flex:1">38-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where AI helps a manager plan</h2>
+    </div>
+    <p class="lede">Planning stalls in two places: staring at a goal with no idea how to break it down, and drowning in inputs with no idea what matters most. AI is strong at both - it drafts OKRs from an outcome, scores a backlog against a framework, and clusters a pile into themes in seconds. That gets you a plan to react to. The react is the whole job: you cut what does not matter, own the tradeoffs, and keep the goals few and honest.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A drafted set of OKRs - objective plus sharp key results - built from one of your real team goals, and a prioritized shortlist pulled from a messy pile of inputs with an impact/effort call you can defend. Two prompts that turn "where do I even start" into a plan.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: GOAL TO PLAN ============ -->
+  <section class="section" id="goal-to-plan">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers OKR / planning canon</span>
+      <h2>From goal to plan <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A plan is a chain: a goal becomes objectives and key results, key results become priorities, priorities become a roadmap and a backlog. AI can draft every link and synthesize scattered inputs into a clean starting point. What it cannot do is decide what matters most when everything looks important - that is strategy, and every tradeoff call along the chain is yours to own.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A planning pipeline: a goal becomes OKRs, then priorities, then a plan - AI assists each step while you own the strategy and tradeoff calls">
+        <defs>
+          <marker id="b4xAh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#C3D2CB"/>
+          </marker>
+        </defs>
+        <style>
+          .b4xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b4xI { font: 700 15px Inter, sans-serif; fill: #12211C; }
+          .b4xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b4xXi { font: 400 12.5px Inter, sans-serif; fill: #4A3A0C; }
+          .b4xM { font: 600 11px Inter, sans-serif; fill: #5C6B64; }
+          .b4xN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <text class="b4xM" x="221" y="60" text-anchor="middle">AI assist</text>
+        <text class="b4xM" x="446" y="60" text-anchor="middle">AI assist</text>
+        <text class="b4xM" x="671" y="60" text-anchor="middle">AI assist</text>
+        <rect x="20" y="70" width="180" height="100" rx="12" fill="#1B5E4B"/>
+        <text class="b4xT" x="40" y="108">Goal</text>
+        <text class="b4xX" x="40" y="130">the outcome you</text>
+        <text class="b4xX" x="40" y="148">want, in plain words</text>
+        <line x1="205" y1="120" x2="238" y2="120" stroke="#C3D2CB" stroke-width="2" marker-end="url(#b4xAh)"/>
+        <rect x="245" y="70" width="180" height="100" rx="12" fill="#3E8E72"/>
+        <text class="b4xT" x="265" y="108">OKRs</text>
+        <text class="b4xX" x="265" y="130">objective + sharp</text>
+        <text class="b4xX" x="265" y="148">key results</text>
+        <line x1="430" y1="120" x2="463" y2="120" stroke="#C3D2CB" stroke-width="2" marker-end="url(#b4xAh)"/>
+        <rect x="470" y="70" width="180" height="100" rx="12" fill="#A7D4C4"/>
+        <text class="b4xI" x="490" y="108">Priorities</text>
+        <text class="b4xXi" x="490" y="130">impact / effort</text>
+        <text class="b4xXi" x="490" y="148">sort</text>
+        <line x1="655" y1="120" x2="688" y2="120" stroke="#C3D2CB" stroke-width="2" marker-end="url(#b4xAh)"/>
+        <rect x="695" y="70" width="165" height="100" rx="12" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b4xI" x="715" y="108">Plan</text>
+        <text class="b4xXi" x="715" y="130">roadmap +</text>
+        <text class="b4xXi" x="715" y="148">scored backlog</text>
+        <rect x="20" y="250" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b4xN" x="44" y="262">AI drafts every link; you own the strategy and the tradeoff calls at each step.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the planning pipeline: AI assists each link, you own the tradeoffs</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>AI drafts the links, you own the tradeoffs<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The trap with AI planning is that it makes everything look reasonable. Ask for a plan and you get a tidy, plausible, complete one - which feels like progress but hides the real work. The real work is choosing: fewer objectives, a sharper key result, the priority you will cut so the top one gets done. AI removes the drudgery of drafting; it must not remove the discipline of deciding.</p>
+        <ul>
+          <li><strong>Let it draft the chain.</strong> Goal to OKRs to priorities to roadmap - a first version in seconds beats a blank planning doc.</li>
+          <li><strong>You make the cuts.</strong> A plan is defined by what it leaves out. AI will happily keep everything; your job is to say no.</li>
+          <li><strong>Keep the goals few and honest.</strong> Three real objectives beat ten aspirational ones. If everything is a priority, nothing is.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI) - goal to OKRs</span>Here is a team goal for this quarter: [goal in one sentence]. Draft one clear objective and 3 measurable key results. Keep it to 3. Then tell me which key result is weakest and why, so I can sharpen or cut it.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The tidy plan that was quietly wrong.</strong> A manager asked AI for a quarterly plan and got a beautiful one - twelve initiatives, every box ticked. It went to the team as-is. Two weeks in, it was obvious nobody could do twelve things, and the two that actually mattered were buried in the middle. The plan looked complete and was undeliverable. The fix was not a better prompt - it was the manager doing the cut AI never will: three priorities, the rest parked. A tidy plan is not a right plan.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What makes a key result actually good<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI drafts key results fast, but it defaults to vague ones. Sharpen every draft against these:</p>
+        <ul>
+          <li><strong>Measurable, not fuzzy.</strong> "Improve onboarding" is a wish. "Cut new-hire ramp from 8 weeks to 5" is a key result.</li>
+          <li><strong>An outcome, not a task.</strong> "Ship the new flow" is activity. "Lift activation to 40%" is the result you actually want.</li>
+          <li><strong>Honest, not sandbagged and not fantasy.</strong> A key result you will definitely hit was too easy; one you have no path to is theatre.</li>
+          <li><strong>Few.</strong> Three per objective, max. More is a signal you have not chosen yet.</li>
+        </ul>
+        <p>Have AI draft, then run every key result through this list yourself. That edit is where a generic plan becomes yours.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: PRIORITIZATION WITH AI ============ -->
+  <section class="section" id="prioritization">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers OKR / planning canon - prioritization</span>
+      <h2>Prioritization with AI <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Prioritization frameworks are just structured prompts, and AI runs them well. Hand it impact/effort or a RICE-style scoring and it will draft the scores and cluster a pile of inputs - survey answers, notes, stakeholder asks - into a handful of themes. It does the sorting. You make the tradeoff, because a score is an input to judgment, not a substitute for it.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Frameworks as prompts, the tradeoff stays yours<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A scoring framework does one useful thing: it forces a consistent comparison so the loudest request does not automatically win. AI is great at applying one evenly across a long list. But the score is only as good as the estimates behind it, and the final ranking often ignores something a number cannot hold - a dependency, a relationship, a strategic bet. So you use the score to think, then you decide.</p>
+        <ul>
+          <li><strong>Impact / effort</strong> - fastest sort. AI drafts both axes; you sanity-check the effort estimates, which are usually optimistic.</li>
+          <li><strong>RICE-style</strong> (reach, impact, confidence, effort) - more rigor for a big list; AI computes, you challenge the confidence scores.</li>
+          <li><strong>Synthesize, then theme</strong> - give AI the pile and ask for the 3 to 5 themes underneath it, with the strongest evidence for each.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The score is an input, not the answer</strong>
+          Let AI rank the list, then look at the top and the cut line and ask: does this ranking feel right, and what is it missing? The number starts the conversation; your judgment ends it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Planning task - AI assist vs your call<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Planning task</th><th>AI assist</th><th>Your call</th></tr></thead>
+          <tbody>
+            <tr><td>Draft OKRs from a goal</td><td>An objective + measurable key results, fast</td><td>Which three, and how honest each target is</td></tr>
+            <tr><td>Score priorities</td><td>Apply impact/effort or RICE evenly across the list</td><td>The estimates, and the ranking a score cannot hold</td></tr>
+            <tr><td>Synthesize inputs</td><td>Cluster a pile into 3-5 themes with evidence</td><td>Which theme is real signal vs the loudest voice</td></tr>
+            <tr><td>Build a roadmap</td><td>Sequence the work into a plausible timeline</td><td>The dependencies and the bets worth making</td></tr>
+            <tr><td>Sequence the backlog</td><td>Order by score, flag quick wins</td><td>The one thing that ships first, and what gets cut</td></tr>
+          </tbody>
+        </table>
+        <p>Same split every row: AI does the even, tireless sorting; you make the choice a number cannot make for you.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: KEEP IT REAL ============ -->
+  <section class="section" id="keep-it-real">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the discipline that keeps a plan honest</span>
+      <h2>Keep it real <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">AI produces plausible plans faster than you can check them, and plausible is exactly the danger. A confident roadmap can rest on assumptions nobody verified, targets nobody has a path to, and a scope no team could deliver. The habit that keeps you safe is boring and non-negotiable: surface the assumptions, verify the ones that matter, and never confuse a tidy plan for a right one.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Verify assumptions, keep goals few and honest<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every plan rides on assumptions - about capacity, about what will work, about what leadership will fund. AI buries them inside confident prose. Your move is to pull them into the light and pressure-test the load-bearing ones before you commit a team to the plan.</p>
+        <ul>
+          <li><strong>Ask for the assumptions.</strong> "What is this plan assuming is true?" - then verify the two or three that would break it if wrong.</li>
+          <li><strong>Keep goals few and honest.</strong> Cut aspirational padding. A plan you can actually deliver beats an impressive one you cannot.</li>
+          <li><strong>Tidy is not right.</strong> Polish is not evidence. The plan that looks best on the slide is not automatically the one that works.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Two questions before you commit</strong>
+          "What is this plan assuming, and which assumption would sink it if it is wrong?" and "Can my team actually deliver this?" If either answer is shaky, the plan is not ready, however tidy it looks.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Draft OKRs from a real team goal <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take one real goal for your team and turn it into a sharp set of OKRs with AI - an objective and measurable key results - then do the part that makes it yours: sharpen the weak ones and cut until only three remain.</p>
+
+    <div class="steps">
+      <div class="step"><p>Write your goal in one plain sentence - the outcome you actually want this quarter, not the activity.</p></div>
+      <div class="step"><p><strong>Draft pass:</strong> ask AI for one objective and three measurable key results, and to name which key result is weakest.</p></div>
+      <div class="step"><p><strong>Sharpen pass:</strong> fix every fuzzy key result - make it an outcome with a number, not a task. Kill "improve", "enhance", "support".</p></div>
+      <div class="step"><p><strong>Honesty pass:</strong> for each target ask "do we have a path to this, and is it a real stretch?" Adjust anything sandbagged or fantasy.</p></div>
+      <div class="step"><p><strong>Cut pass:</strong> hold it to three. If you kept more, you have not chosen yet. The cut is the strategy - own it out loud.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">Prompt A - accept the tidy plan (do not)</span>Give me a full quarterly plan for my team with all the OKRs and initiatives we should run.</div>
+
+    <div class="prompt-box good"><span class="label">★ Prompt B - draft, then you sharpen and cut</span>Team goal for this quarter: [one sentence, the outcome].
+Draft ONE objective and exactly 3 measurable key results. For each key result make it an
+outcome with a number, not a task.
+Then: (1) tell me which key result is weakest and why; (2) list the assumptions this set is
+making; (3) flag any target you think is too easy or has no realistic path.
+I will sharpen and cut from there - keep it to three.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Three beat ten.</strong> A team lead drafted OKRs with AI and got a solid objective plus eight key results - all reasonable. Instead of shipping all eight, they used the "which is weakest" answer to cut down to three that actually mattered, and parked the rest. The quarter closed with all three hit. The version with eight would have ended with eight half-done. AI drafted the options; the manager owned the cut.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>A pile of inputs into three themes + a shortlist <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Turn a mess of inputs - survey answers, notes, stakeholder asks - into three clear themes and a prioritized shortlist with an impact/effort call you can defend.</p>
+
+    <div class="steps">
+      <div class="step"><p>Gather your pile: retro notes, a survey, the list of asks. Remove anything that identifies a specific person if it is sensitive.</p></div>
+      <div class="step"><p>Ask AI to cluster it into three to five themes, with the strongest evidence for each - not just the loudest one.</p></div>
+      <div class="step"><p>Ask it to draft an impact/effort score for each candidate item and rank them, flagging the effort estimates it is least sure of.</p></div>
+      <div class="step"><p><strong>Your call:</strong> look at the top and the cut line. Adjust the estimates you know are off, and pick the one item that ships first and what gets parked.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The synthesize-and-prioritize prompt</span>Here is a pile of inputs [paste survey answers / notes / asks].
+1) Cluster it into 3-5 themes. For each, give the strongest evidence - not just the most
+   frequent, the most important.
+2) List the candidate actions. Draft an impact (1-5) and effort (1-5) score for each and
+   rank them.
+3) Flag the effort estimates you are least confident about so I can correct them.
+I will make the final tradeoff call on what ships first and what we park.</div>
+
+    <div class="callout tip">
+      <strong>Own the cut line</strong>
+      AI gives you a ranked list; the cut line - where "yes" becomes "not now" - is a judgment call. Draw it yourself, name what falls below it, and be able to say why. That line is the plan.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish both demos if you did not complete them live - especially the cut pass on the OKRs. Choosing three is the lesson.</li>
+      <li>Take one real goal and draft OKRs with AI, then sharpen and cut to three you would defend to your boss.</li>
+      <li>Run the synthesize prompt on a real pile of inputs and see if the top theme matches your gut - and where it does not.</li>
+      <li>On any plan you already have, ask AI to list its assumptions, then verify the one that would sink it if wrong.</li>
+      <li>Optional: keep both prompts handy. "Goal to OKRs" and "synthesize and prioritize" are weekly moves.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the OKR and planning canon - goal-setting, prioritization frameworks, and synthesis. Certificates and exec-ed programs stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">OKR / planning canon - goals to key results</span><span class="note">Part 1 · AI drafts the chain, you own the tradeoffs</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Prioritization frameworks (impact/effort, RICE)</span><span class="note">Part 2 · frameworks as prompts, the call stays yours</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Input synthesis practice</span><span class="note">Part 2 · cluster a pile into themes</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Decision-quality canon - assumptions</span><span class="note">Part 3 · verify before you commit</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · AI drafts a complete, tidy quarterly plan. What is your job?</p>
+      <button class="qopt" type="button">A · Ship it as-is - a complete plan is a good plan</button>
+      <button class="qopt" type="button">B · Add more initiatives so nothing is missed</button>
+      <button class="qopt" type="button">C · Make the cuts and own the tradeoffs - a plan is defined by what it leaves out</button>
+      <p class="qwhy">AI will happily keep everything, which feels like progress but hides the real work. Choosing the few things that matter and cutting the rest is the strategy, and it stays yours.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · You use AI to score a backlog with impact/effort. How do you treat the ranking?</p>
+      <button class="qopt" type="button">A · As an input to your judgment - check the estimates and what the number cannot hold</button>
+      <button class="qopt" type="button">B · As the final answer, since the framework is objective</button>
+      <button class="qopt" type="button">C · Ignore it - frameworks never help</button>
+      <p class="qwhy">A score is only as good as the estimates behind it, and a ranking often misses a dependency or a strategic bet. AI does the even sorting; you make the tradeoff.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Why verify assumptions on an AI-generated plan?</p>
+      <button class="qopt" type="button">A · Because AI plans are always wrong</button>
+      <button class="qopt" type="button">B · Because a plausible, tidy plan can rest on unverified assumptions and a scope no team can deliver</button>
+      <button class="qopt" type="button">C · You do not - if it looks polished it is ready</button>
+      <p class="qwhy">Plausible is the danger: confident prose buries the assumptions. Pull them into the light, verify the load-bearing ones, and never confuse a tidy plan for a right one.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>AI drafts, you cut</b><span>goal to OKRs to priorities to plan - AI drafts every link; you own the tradeoffs.</span></div>
+      <div class="cheat-item"><b>Good key result</b><span>measurable, an outcome not a task, honest, and few - three per objective, max.</span></div>
+      <div class="cheat-item"><b>Frameworks as prompts</b><span>impact/effort for speed, RICE for rigor. AI scores evenly; you challenge the estimates.</span></div>
+      <div class="cheat-item"><b>Score is an input</b><span>let AI rank, then look at the top and the cut line and ask what the number is missing.</span></div>
+      <div class="cheat-item"><b>Synthesize a pile</b><span>ask for 3-5 themes with the strongest evidence, not just the loudest voice.</span></div>
+      <div class="cheat-item"><b>Verify assumptions</b><span>"what is this assuming, and which one would sink it if wrong?" Check before you commit.</span></div>
+      <div class="cheat-item"><b>Tidy ≠ right</b><span>polish is not evidence; keep goals few and honest, and deliverable by your real team.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b5 - feedback &amp; performance: reviews and coaching, with fairness and bias front of mind.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 4 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-communication-writing.html">← Previous: Communication &amp; writing</a> &nbsp;·&nbsp; <a href="b5-feedback-performance.html">Next: Feedback &amp; performance →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

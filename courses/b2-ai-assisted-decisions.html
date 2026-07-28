@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 2 · AI-assisted decisions - learn AI + leadership with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<style>
+  /* ---- leadership-live simulator (scoped ll-*) ---- */
+  .ll-shell { display: grid; grid-template-columns: 15.5rem 1fr; gap: 1rem; border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#E4F0EB); padding: 1rem; margin: 1.2rem 0 .4rem; }
+  @media (max-width: 720px) { .ll-shell { grid-template-columns: 1fr; } }
+  .ll-ctitle { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--indigo); margin-bottom: .6rem; }
+  .ll-levers { display: flex; flex-direction: column; gap: .5rem; }
+  .ll-lever { display: flex; align-items: center; gap: .6rem; text-align: left; border: 1px solid var(--hairline); background: #fff; border-radius: 12px; padding: .55rem .7rem; cursor: pointer; transition: all .14s ease; font: inherit; color: var(--ink); }
+  .ll-lever:hover { border-color: var(--indigo-soft); }
+  .ll-lever.ll-active { border-color: var(--indigo); background: var(--indigo-50); }
+  .ll-sw { flex: none; width: 2rem; height: 1.15rem; border-radius: 999px; background: var(--faint); position: relative; transition: background .14s ease; }
+  .ll-sw::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.15rem - 4px); height: calc(1.15rem - 4px); border-radius: 50%; background: #fff; transition: transform .14s ease; box-shadow: 0 1px 2px rgba(18,33,28,.3); }
+  .ll-lever.ll-active .ll-sw { background: var(--indigo); }
+  .ll-lever.ll-active .ll-sw::after { transform: translateX(.85rem); }
+  .ll-ltext { display: flex; flex-direction: column; line-height: 1.25; }
+  .ll-ltext b { font-size: .84rem; font-weight: 700; }
+  .ll-ltext span { font-size: .72rem; color: var(--muted); }
+  .ll-modes { display: flex; gap: .4rem; margin-top: .9rem; }
+  .ll-mode { flex: 1; border: 1px solid var(--hairline); background: #fff; border-radius: 999px; padding: .38rem .5rem; font-size: .74rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .14s ease; }
+  .ll-mode.ll-on { background: var(--indigo); color: #fff; border-color: var(--indigo); }
+  .ll-stage { min-width: 0; }
+  .ll-meters { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: .8rem; }
+  .ll-meter { flex: 1; min-width: 9rem; border: 1px solid var(--hairline); border-radius: 12px; background: #fff; padding: .6rem .8rem; }
+  .ll-mlabel { display: block; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+  .ll-mval { font-size: 1.7rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.2; color: var(--ink); }
+  .ll-mval.ll-good { color: var(--indigo); }
+  .ll-bar { height: 7px; border-radius: 999px; background: var(--hairline); margin-top: .35rem; overflow: hidden; }
+  .ll-bar i { display: block; height: 100%; background: linear-gradient(90deg,var(--indigo-mid),var(--indigo)); transition: width .3s ease; }
+  .ll-draftlabel, .ll-scorehead { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--indigo); margin-bottom: .4rem; }
+  .ll-scorehead { text-transform: none; font-size: .95rem; letter-spacing: 0; color: var(--ink); }
+  .ll-draft { border: 1px solid var(--hairline); border-left: 3px solid var(--indigo); border-radius: 10px; background: #fff; padding: .8rem 1rem; }
+  .ll-line { font-size: .9rem; margin: 0 0 .55rem; line-height: 1.6; }
+  .ll-line:last-child { margin-bottom: 0; }
+  .ll-line.ll-warn { color: var(--amber-ink); background: var(--amber-50); border-radius: 8px; padding: .5rem .65rem; }
+  .ll-tag { display: inline-block; font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--indigo); background: var(--indigo-50); border-radius: 5px; padding: .1rem .4rem; margin-right: .3rem; vertical-align: middle; }
+  .ll-table { width: 100%; border-collapse: collapse; margin: .3rem 0 .5rem; font-size: .86rem; }
+  .ll-table th { text-align: left; text-transform: uppercase; font-size: .66rem; letter-spacing: .07em; color: var(--muted); padding: .35rem .5rem; border-bottom: 1px solid var(--hairline); }
+  .ll-table td { padding: .4rem .5rem; border-bottom: .5px solid var(--hairline); }
+  .ll-rmark { font-weight: 800; text-align: center; }
+  .ll-r-ok .ll-rmark { color: var(--indigo); }
+  .ll-r-no .ll-rmark { color: var(--faint); }
+  .ll-note, .ll-rail { font-size: .78rem; color: var(--muted); line-height: 1.55; }
+  .ll-rail { margin-top: .8rem; border-top: 1px dashed var(--hairline); padding-top: .6rem; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-leadership-with-phoebe</a> / Manager session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Leadership with Phoebe · Manager track · Session 2 of 10</div>
+    <h1>AI-assisted decisions: <span class="accent">think wider, then decide</span></h1>
+    <p class="sub">Decisions are the core of the job, and AI is a genuine force multiplier on them - if you use it to widen your thinking, not to rubber-stamp it. This session gives you the decision-quality method, then a live simulator where you watch a decision go from a confident guess to a decision-grade brief as you frame it, widen the options, and stress-test for bias. The call, always, stays yours.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Practitioners: managers · team leads</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · Decision quality</span>
+      <span class="a3" style="flex:5">17-42 · Simulator + build-along</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Decision quality, not decision outcome</h2>
+    </div>
+    <p class="lede">A good decision is not one that happened to work out - it is one made well: the right question, real options, the information you had, and a clear values call. You control the process, not the luck. AI can lift the quality of the process dramatically - widening options, surfacing information, running a pre-mortem - while the framing and the values stay yours. Tonight you build that habit and feel it in the simulator.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A five-part decision-quality frame, hands-on time with the decision-quality simulator, a reusable "candid advisor" decision prompt, and a pre-mortem habit that catches the failure before it happens - all with the call staying yours.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: DECISION QUALITY ============ -->
+  <section class="section" id="decision-quality">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers decision-science + MIT Sloan decision frameworks</span>
+      <h2>What makes a decision good <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Five ingredients make a decision high-quality: the right frame, real options, sound information, a clear values call, and commitment. AI can genuinely help with options and information, and can stress-test the frame - but the frame and the values are the leader's. Anatomy first.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The anatomy of a good decision: a clear frame, real options, sound information, a values call, and commitment - AI helps with options and information, the leader owns the frame and values">
+        <style>
+          .b2aT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b2aI { font: 700 14px Inter, sans-serif; fill: #12211C; }
+          .b2aX { font: 400 12px Inter, sans-serif; fill: #5C6B64; }
+          .b2aN { font: 600 14px Inter, sans-serif; fill: #4A3A0C; }
+        </style>
+        <rect x="20" y="40" width="250" height="40" rx="8" fill="#14332B"/>
+        <text class="b2aT" x="40" y="65">1 · Frame (the real question)</text>
+        <rect x="20" y="88" width="250" height="40" rx="8" fill="#1B5E4B"/>
+        <text class="b2aT" x="40" y="113">2 · Options (real, &gt; binary)</text>
+        <rect x="20" y="136" width="250" height="40" rx="8" fill="#3E8E72"/>
+        <text class="b2aT" x="40" y="161">3 · Information (sound)</text>
+        <rect x="20" y="184" width="250" height="40" rx="8" fill="#A7D4C4"/>
+        <text class="b2aI" x="40" y="209">4 · Values call + 5 · commit</text>
+        <rect x="320" y="70" width="240" height="52" rx="10" fill="#E7F2EE" stroke="#A7D4C4"/>
+        <text class="b2aI" x="340" y="92">AI helps: options + info</text>
+        <text class="b2aX" x="340" y="110">and stress-tests the frame</text>
+        <rect x="320" y="150" width="240" height="52" rx="10" fill="#F7EFD8" stroke="#B08D2E" stroke-width="1.5"/>
+        <text class="b2aI" x="340" y="172">You own: the frame</text>
+        <text class="b2aX" x="340" y="190">and the values call</text>
+        <rect x="610" y="108" width="245" height="56" rx="10" fill="#1B5E4B"/>
+        <text class="b2aT" x="630" y="132">Good process,</text>
+        <text class="b2aT" x="630" y="150">not lucky outcome</text>
+        <rect x="20" y="232" width="14" height="14" rx="3" fill="#B08D2E"/>
+        <text class="b2aN" x="44" y="244">Judge the decision by how well it was made, not by how it happened to turn out.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - five ingredients of a good decision; AI helps with two, you own two</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Frame first - the highest-leverage move<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most bad decisions are answers to the wrong question. "Should we do X?" is usually a symptom-level frame; "what is the best way to solve the problem X is one response to?" opens the real decision. AI is quick to answer whatever you ask - so the quality of your frame sets the ceiling on the quality of its help.</p>
+        <ul>
+          <li><strong>Reframe from binary to open.</strong> "X or not" hides the third option that is often the best.</li>
+          <li><strong>Name the real problem.</strong> The decision is rarely the first thing you reached for; it is the goal underneath it.</li>
+          <li><strong>You frame, AI fills.</strong> Give it the real frame and it will surface options and information; give it a bad frame and it confidently optimizes the wrong thing.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now - reframe a decision</span>Here is a decision I am facing: [it]. Before giving any answer, help me reframe it: what is the underlying problem, what is the real question, and what binary am I trapped in that might be hiding a better third option?</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>"Should I fire this vendor?" was the wrong question.</strong> A manager framed it as fire-or-keep. Reframed with AI to "how do we get reliable delivery for this workstream?", a third option appeared - restructure the SLA and split one critical piece in-house - that beat both. Same facts, a better frame, a better decision.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The pre-mortem - the cheapest risk tool you have<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A pre-mortem asks: assume it is six months later and this decision failed - why? It surfaces the risks optimism hides, and AI is genuinely good at it because it is not emotionally invested in your plan. Run one on every consequential decision.</p>
+        <table class="clean">
+          <thead><tr><th>Ask AI for...</th><th>What it surfaces</th></tr></thead>
+          <tbody>
+            <tr><td>The three most likely failure modes</td><td>Risks your optimism skipped</td></tr>
+            <tr><td>Whose perspective is missing</td><td>Stakeholders you did not consult</td></tr>
+            <tr><td>What would change your recommendation</td><td>The evidence you should go get</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ INTERACTIVE: THE SIMULATOR ============ -->
+  <section class="section" id="simulator">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the decision-quality simulator</span>
+      <h2>Drive it yourself: watch the decision get better <span class="tag demo">★ 8 min · everyone plays</span></h2>
+    </div>
+    <p class="lede">Here is the whole lesson in one control panel. The AI is helping with a management decision. Every lever you turn on raises the quality - frame the real decision, add context, widen the options, stress-test for bias, apply your judgment. Watch decision quality climb and flip to the scorecard to see how many decision types come out sound. Notice what never moves the needle: letting AI decide for you.</p>
+
+    <div id="leadership-live"></div>
+
+    <div class="callout tip">
+      <strong>What the simulator is teaching</strong>
+      Start with everything off: the AI gives a confident, agreeable push toward whatever you hinted at. Frame the real decision and it sharpens; add context, options, and a bias check and it becomes genuine counsel; apply your judgment and it hands the call back to you, where it belongs. Quality came from the process - and the human owning it.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build a decision brief for a real call <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Now do it for real, on a decision you actually face. This is the reusable pattern you will run before any consequential call.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick a real, consequential decision. Strip names and people-data (rail two).</p></div>
+      <div class="step"><p>Frame it as the underlying problem, then ask AI for three genuine options with tradeoffs, including a do-nothing baseline.</p></div>
+      <div class="step"><p>Ask for the strongest case against your favorite, a pre-mortem, and whose perspective is missing - the full advisor treatment.</p></div>
+      <div class="step"><p>Now write your decision and the why in two sentences. AI built the brief; you make and own the call.</p></div>
+      <div class="step"><p>Save the prompt as your "decision brief" template. Every hard call gets ten better minutes now.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The decision-brief prompt</span>Help me make a high-quality decision. The underlying problem is: [problem].
+Act as a candid advisor who disagrees when warranted.
+1) Reframe the real question if I have framed it too narrowly.
+2) Give three genuine options with tradeoffs, including doing nothing.
+3) Make the strongest case against the option I am leaning toward: [option].
+4) Run a pre-mortem: if this fails in six months, the likeliest reasons.
+5) Tell me whose perspective I am missing and what evidence would change your view.
+Do not tell me I am right by default. I will make the final call.</div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Red-team a decision you have already made <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">The habit that separates good managers from lucky ones: pressure-test a decision before it ships, not after it fails.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take a decision you are about to act on. Give AI the plan and ask it to be a hostile red-team, not a supporter.</p></div>
+      <div class="step"><p>Ask for the three ways this backfires, the assumption most likely to be wrong, and the one change that would most reduce the risk.</p></div>
+      <div class="step"><p>Decide what to adjust - or consciously accept the risk. Either way you now lead with your eyes open.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The red-team prompt</span>Here is a decision I am about to act on: [plan]. Do not reassure me.
+Be a hostile red-team: the three most likely ways this backfires, the single assumption
+most likely to be wrong, the stakeholder who will be most unhappy and why, and the one
+change that would most reduce the downside. Rank them by likelihood times impact.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The pre-mortem that saved a launch.</strong> A team red-teamed a rollout plan with AI the day before. The top-ranked failure - a dependency no one owned - was exactly what would have sunk it. Ten minutes of deliberate pessimism beat a month of clean-up. The AI did not decide anything; it just refused to be agreeable when it counted.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the decision-brief prompt on one real (anonymized) call this week. Note the option or risk you had not seen.</li>
+      <li>Play the simulator again and predict the quality score before each toggle - predicting it means you understand what drives a good decision.</li>
+      <li>Red-team one decision you have already made. If it holds up, good; if not, you just avoided a slow failure.</li>
+      <li>Catch one binary frame this week ("X or not") and force a third option before deciding.</li>
+      <li>Optional: keep a two-line decision log - the call and the why - so you can judge your process, not just the outcome.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from decision-science and public AI-leadership curricula. Certificates stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Decision-science canon - decision quality, framing, pre-mortem</span><span class="note">Part 1 · the five ingredients + the frame-first move</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">MIT Sloan / exec-ed - data-driven decision-making</span><span class="note">Part 1 + demos · AI as a decision co-pilot</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Cognitive-bias + red-team practice</span><span class="note">Demo 2 · deliberate pessimism against confirmation bias</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · In the simulator, what raises the decision quality?</p>
+      <button class="qopt" type="button">A · A bigger model</button>
+      <button class="qopt" type="button">B · Letting the AI make the call</button>
+      <button class="qopt" type="button">C · Framing the real decision, widening options, stress-testing for bias - and you owning it</button>
+      <p class="qwhy">Quality comes from the process: frame, options, information, bias check, and human judgment. Letting AI decide never improves it.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · What is the highest-leverage move in a decision?</p>
+      <button class="qopt" type="button">A · Getting the frame right - answering the real question, not the symptom</button>
+      <button class="qopt" type="button">B · Asking the AI more times</button>
+      <button class="qopt" type="button">C · Deciding faster</button>
+      <p class="qwhy">The frame sets the ceiling on everything after it. A bad frame makes AI confidently optimize the wrong thing; a good frame unlocks the real options.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What is a pre-mortem?</p>
+      <button class="qopt" type="button">A · A review after the decision fails</button>
+      <button class="qopt" type="button">B · Assuming the decision already failed and asking why - before you commit</button>
+      <button class="qopt" type="button">C · A meeting to celebrate a decision</button>
+      <p class="qwhy">A pre-mortem surfaces the risks optimism hides. AI is good at it precisely because it is not emotionally invested in your plan.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Decision quality</b><span>judge a decision by how well it was made - frame, options, information, values, commit - not by luck.</span></div>
+      <div class="cheat-item"><b>Frame first</b><span>the highest-leverage move. Reframe "X or not" into the real problem; the frame caps AI's help.</span></div>
+      <div class="cheat-item"><b>AI helps two, you own two</b><span>AI widens options + surfaces information; you own the frame and the values call.</span></div>
+      <div class="cheat-item"><b>Widen the options</b><span>force a third path and a do-nothing baseline - the best answer is often not in your first binary.</span></div>
+      <div class="cheat-item"><b>Pre-mortem</b><span>"assume it failed in 6 months - why?" AI is great at it because it is not invested in your plan.</span></div>
+      <div class="cheat-item"><b>Red-team it</b><span>make AI hostile before you ship: failure modes, the weakest assumption, the one risk-cutting change.</span></div>
+      <div class="cheat-item"><b>You decide</b><span>AI builds the brief; you make and own the call. Decision quality climbs by process, not model size.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b3 - communication &amp; writing: draft the update, the tough message, the exec summary, in your voice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 2 of 10 · learn-ai-leadership-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-ai-foundations-managers.html">← Previous: AI foundations for managers</a> &nbsp;·&nbsp; <a href="b3-communication-writing.html">Next: Communication &amp; writing →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/leadership-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
