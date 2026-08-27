@@ -86,10 +86,10 @@ body {
   color: #fff;
 }
 .agenda span { padding: .45rem .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.agenda .a1 { background: var(--indigo-deep); }
-.agenda .a2 { background: var(--indigo-mid); }
-.agenda .a3 { background: var(--amber); color: var(--amber-ink); }
-.agenda .a4 { background: var(--indigo-soft); }
+.agenda .a1 { background: var(--indigo-deep); color: #fff; }
+.agenda .a2 { background: #377F66; color: #fff; }
+.agenda .a3 { background: var(--amber); color: var(--ink); }
+.agenda .a4 { background: var(--indigo-soft); color: var(--ink); }
 
 /* ---------- toolbar ---------- */
 .toolbar {
@@ -767,3 +767,17 @@ figure.zoomable.can-scroll figcaption::after {
   color: var(--pv-flag);
 }
 /* === /LWP-PATCH === */
+
+
+/* .qteam is the "Questions to ask your team" prompt paragraph and had no rule,
+   so it read as ordinary body copy. Same job as .q-lead in
+   learn-ai-content-with-phoebe, which is a naming split worth collapsing if
+   these two components are ever unified. */
+.qteam {
+  margin: 1.1rem 0;
+  padding: .75rem 1rem;
+  background: var(--paper);
+  border-left: 3px solid var(--indigo);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: .92rem;
+}
